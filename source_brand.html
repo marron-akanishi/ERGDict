@@ -1,0 +1,1645 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<link href="./css/default.css" rel="stylesheet" type="text/css" />
+<link href="./css/sql_for_erogamer.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
+<style type="text/css">
+#povlist{ margin-bottom: 0.1em; }
+</style>
+<title>SQL実行フォーム -エロゲーマーのためのSQL-</title>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24809113-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<!-- container　ここから -->
+<div id="container">
+
+<!-- heder　ここから -->
+<div id="header">
+
+<div id="title">
+<div id="title_header"><h1><a href="sql_for_erogamer_index.php">エロゲーマーのためのSQL</a></h1></div>
+</div>
+
+</div>
+<!-- heder　ここまで --><!-- main　ここから -->
+<div id="main">
+<div id="main_header"><h2>SQL実行フォーム</h2></div>
+<div id="topic_path" class="topic_path" style="margin-top:15px; margin-bottom:15px;">
+<a href="sql_for_erogamer_index.php">トップページ</a> → SQL実行フォーム
+</div>
+<div id="main_main">
+
+<!-- form ここから -->
+<div id="form">
+<div id="form_header"><h3>SQL実行フォーム</h3></div>
+<div id="form_main">
+<form action="/~ap2/ero/toukei_kaiseki/sql_for_erogamer_form.php" method="post">
+<div id="sql"><textarea name="sql" rows="30" cols="150">SELECT brandfurigana,brandname
+  FROM brandlist
+ WHERE kind = &#039;CORPORATION&#039;
+AND lost = &#039;FALSE&#039;
+ORDER BY brandfurigana
+</textarea></div>
+<div id="submit"><input type="submit" value="実行" /></div>
+</form>
+</div>
+</div>
+<!-- form ここまで -->
+
+<div id="queryplan" class="bottom-margin">
+<div id="queryplan_header"><h3>QUERY PLAN</h3></div>
+<div id="queryplan_main">
+<pre>
+Sort  (cost=232.49..236.93 rows=1778 width=35)<br />
+  Sort Key: brandfurigana<br />
+  -&gt;  Seq Scan on brandlist  (cost=0.00..136.51 rows=1778 width=35)<br />
+        Filter: ((NOT lost) AND (kind = &#039;CORPORATION&#039;::text))<br />
+</pre>
+</div>
+</div>
+<div id="query_result" class="bottom-margin">
+<div id="query_result_header"><h3>SQLの実行結果</h3></div>
+<div id="query_result_main"><table>
+<tr><th>brandfurigana</th><th>brandname</th></tr>
+<tr><td>アアトアイテイ</td><td>ああとあいてぃ(AATIT)</td></tr>
+<tr><td>アイアイ</td><td>あいあい</td></tr>
+<tr><td>アイアールアイシーティー</td><td>IRI-CT</td></tr>
+<tr><td>アイギス</td><td>EGIS</td></tr>
+<tr><td>アイシングキャンディ</td><td>icingCandy</td></tr>
+<tr><td>アイスワン</td><td>iSWAN</td></tr>
+<tr><td>アイチェリー</td><td>アイチェリー</td></tr>
+<tr><td>アイディアファクトリー</td><td>IDEA FACTORY</td></tr>
+<tr><td>アイディー</td><td>I.D.</td></tr>
+<tr><td>アイフォン</td><td>eye★phon</td></tr>
+<tr><td>アイメル</td><td>iMel</td></tr>
+<tr><td>アイランドベル</td><td>Island Belle</td></tr>
+<tr><td>アイリス</td><td>Iris</td></tr>
+<tr><td>アイリュ</td><td>あいりゅ</td></tr>
+<tr><td>アイル</td><td>アイル</td></tr>
+<tr><td>アイレムソフトエンジニアリング</td><td>アイレムソフトエンジニアリング</td></tr>
+<tr><td>アイン</td><td>アイン</td></tr>
+<tr><td>アインツ</td><td>Eins</td></tr>
+<tr><td>アウトグリッド</td><td>OUTGRID</td></tr>
+<tr><td>アウローラ</td><td>AURORA</td></tr>
+<tr><td>アオソラビスケット</td><td>青空ビスケット</td></tr>
+<tr><td>アカツキワークス</td><td>暁WORKS</td></tr>
+<tr><td>アカツキワークスヒビキサイド</td><td>hibiki works(暁WORKS響SIDE)</td></tr>
+<tr><td>アカトンボ</td><td>あかとんぼ</td></tr>
+<tr><td>アカベェソフトツゥ</td><td>あかべぇそふとつぅ</td></tr>
+<tr><td>アカベェソフトツゥトライ</td><td>あかべぇそふとつぅTRY</td></tr>
+<tr><td>アカベエソフトスリィ</td><td>あかべぇそふとすりぃ</td></tr>
+<tr><td>アキュートエンターテイメント</td><td>AcuteEntertainment</td></tr>
+<tr><td>アクアウェイブ</td><td>AQUAWAVE</td></tr>
+<tr><td>アクアプラス</td><td>AQUAPLUS</td></tr>
+<tr><td>アクセプト</td><td>Accept</td></tr>
+<tr><td>アクセラ</td><td>アクセラ</td></tr>
+<tr><td>アクセル</td><td>AXL</td></tr>
+<tr><td>アクセント</td><td>ACCENT</td></tr>
+<tr><td>アクティマインド</td><td>Actmind</td></tr>
+<tr><td>アクトレス</td><td>ACTRESS</td></tr>
+<tr><td>アクビ</td><td>悪美</td></tr>
+<tr><td>アクメアール</td><td>Acme.R</td></tr>
+<tr><td>アクメエックス</td><td>Acme.X</td></tr>
+<tr><td>アクレイムジャパン</td><td>アクレイムジャパン</td></tr>
+<tr><td>アクワイア</td><td>アクワイア</td></tr>
+<tr><td>アサプロジェクト</td><td>ASa project</td></tr>
+<tr><td>アザラシソフト</td><td>あざらしそふと</td></tr>
+<tr><td>アザラシソフトゼロ</td><td>あざらしそふと零</td></tr>
+<tr><td>アシッドプラン</td><td>ACID PLAN</td></tr>
+<tr><td>アスガルド</td><td>アスガルド</td></tr>
+<tr><td>アスキーメディアワークス</td><td>アスキー・メディアワークス</td></tr>
+<tr><td>アスク</td><td>ask</td></tr>
+<tr><td>アスクコウダンシャ</td><td>アスク講談社</td></tr>
+<tr><td>アストレイ</td><td>Astray</td></tr>
+<tr><td>アストロノーツ</td><td>Astronauts</td></tr>
+<tr><td>アストロノーツアリア</td><td>アストロノーツ・アリア</td></tr>
+<tr><td>アストロノーツスピカ</td><td>アストロノーツ・スピカ</td></tr>
+<tr><td>アスミックエースエンタテインメント</td><td>アスミック・エース　エンタテインメント</td></tr>
+<tr><td>アスロトノーツコメット</td><td>アストロノーツ・コメット</td></tr>
+<tr><td>アスロトノーツシリウス</td><td>アストロノーツ・シリウス</td></tr>
+<tr><td>アズライト</td><td>Azurite</td></tr>
+<tr><td>アズリング</td><td>A&#039;sRing</td></tr>
+<tr><td>アズロクス</td><td>アズロクス</td></tr>
+<tr><td>アソベル</td><td>ASOBELL</td></tr>
+<tr><td>アダルティン</td><td>アダルティン</td></tr>
+<tr><td>アップリケ</td><td>あっぷりけ</td></tr>
+<tr><td>アップルシーツー</td><td>あっぷるC.C.</td></tr>
+<tr><td>アテナ</td><td>アテナ</td></tr>
+<tr><td>アトラス</td><td>ATLUS</td></tr>
+<tr><td>アトリエカグヤ</td><td>アトリエかぐや</td></tr>
+<tr><td>アトリエグノーシス</td><td>アトリエGnosis</td></tr>
+<tr><td>アトリエサクラエクストラ</td><td>アトリエさくら eXtra</td></tr>
+<tr><td>アトリエサクラコンマイスタジオ</td><td>アトリエさくら こんまいすたじお</td></tr>
+<tr><td>アトリエサクラダークネス</td><td>アトリエさくら DARKNESS</td></tr>
+<tr><td>アトリエサクラチームエヌティーアール</td><td>アトリエさくら Team.NTR</td></tr>
+<tr><td>アトリエサクラロシュツユウギ</td><td>アトリエさくら 露出遊戯</td></tr>
+<tr><td>アトリエジーエッチ</td><td>Atelier G/H</td></tr>
+<tr><td>アトレッドセイサクイインカイ</td><td>-atled-制作委員会</td></tr>
+<tr><td>アドニス</td><td>ADNiS</td></tr>
+<tr><td>アドリブ</td><td>ad:lib</td></tr>
+<tr><td>アナスタシア</td><td>アナスタシア</td></tr>
+<tr><td>アナログファクトリー</td><td>ANALOG FACTORY</td></tr>
+<tr><td>アニシード</td><td>AniSeed</td></tr>
+<tr><td>アニム</td><td>Anim</td></tr>
+<tr><td>アニムイー</td><td>Anim-e</td></tr>
+<tr><td>アニムチームエムエム</td><td>ANIM.teamMM</td></tr>
+<tr><td>アニムマザーアンドワイフ</td><td>Anim Mother&amp;Wife</td></tr>
+<tr><td>アニメシール</td><td>Anime-seal</td></tr>
+<tr><td>アニメリリス</td><td>ANIME LiLiTH</td></tr>
+<tr><td>アネセン</td><td>あねせん</td></tr>
+<tr><td>アネモネ</td><td>Anemone</td></tr>
+<tr><td>アハン</td><td>AHAAN</td></tr>
+<tr><td>アパタイト</td><td>アパタイト</td></tr>
+<tr><td>アパダッシュ</td><td>アパダッシュ</td></tr>
+<tr><td>アプリコット</td><td>ApRicoT</td></tr>
+<tr><td>アプリコットチェリー</td><td>Apricot Cherry</td></tr>
+<tr><td>アプリコットプラム</td><td>Apricot Plum</td></tr>
+<tr><td>アベリア</td><td>abelia</td></tr>
+<tr><td>アボガドパワーズ</td><td>アボガドパワーズ</td></tr>
+<tr><td>アポロンクリエイト</td><td>アポロンクリエイト</td></tr>
+<tr><td>アマナットウ</td><td>あまなっとう</td></tr>
+<tr><td>アマナットウパフェ</td><td>あまなっとうぱふぇ</td></tr>
+<tr><td>アマノハ</td><td>天ノ葉</td></tr>
+<tr><td>アメデオ</td><td>AMEDEO</td></tr>
+<tr><td>アメノムラクモ</td><td>アメノムラクモ</td></tr>
+<tr><td>アモルファス</td><td>Amolphas</td></tr>
+<tr><td>アラモード</td><td>あらもーど</td></tr>
+<tr><td>アリア</td><td>ARIA</td></tr>
+<tr><td>アリアンロッド</td><td>Arianrhod</td></tr>
+<tr><td>アリエス</td><td>Aries</td></tr>
+<tr><td>アリカ</td><td>アリカ</td></tr>
+<tr><td>アリスジャパン</td><td>アリスJAPAN</td></tr>
+<tr><td>アリスソフト</td><td>ALICE SOFT</td></tr>
+<tr><td>アリスノワール</td><td>AliceNoir</td></tr>
+<tr><td>アリスブルー</td><td>Alice Blue</td></tr>
+<tr><td>アルコット</td><td>ALcot</td></tr>
+<tr><td>アルコットハニカム</td><td>ALcotハニカム</td></tr>
+<tr><td>アルゼ</td><td>アルゼ</td></tr>
+<tr><td>アルタイル</td><td>Altair</td></tr>
+<tr><td>アルテミス</td><td>Artemis</td></tr>
+<tr><td>アルテロ</td><td>ALTERO</td></tr>
+<tr><td>アルファシステム</td><td>AlfaSystem</td></tr>
+<tr><td>アルペジオ</td><td>アルペジオ</td></tr>
+<tr><td>アルマ</td><td>ALMA</td></tr>
+<tr><td>アルマディロ</td><td>ARMADILLO</td></tr>
+<tr><td>アルュメ</td><td>アルュメ</td></tr>
+<tr><td>アルレイト</td><td>R-RATE</td></tr>
+<tr><td>アレント</td><td>ALLENT</td></tr>
+<tr><td>アロマリエ</td><td>アロマリエ</td></tr>
+<tr><td>アローピアス</td><td>Alo-pierce</td></tr>
+<tr><td>アワーグラス</td><td>hourglass</td></tr>
+<tr><td>アンエヌエー</td><td>UnN/A</td></tr>
+<tr><td>アンキシャス</td><td>anxious</td></tr>
+<tr><td>アンコクゲキジョウ</td><td>暗黒劇場</td></tr>
+<tr><td>アンコネクト</td><td>UN・CONNECT</td></tr>
+<tr><td>アンサンブル</td><td>ensemble</td></tr>
+<tr><td>アンサンブルスウィート</td><td>ensemble SWEET</td></tr>
+<tr><td>アンジン</td><td>ANJIN</td></tr>
+<tr><td>アンズ</td><td>Ands</td></tr>
+<tr><td>アンタッチャブル</td><td>あんたっちゃぶる</td></tr>
+<tr><td>アンダームーン</td><td>アンダームーン</td></tr>
+<tr><td>アンティーク</td><td>An*tique</td></tr>
+<tr><td>アンノウン</td><td>UNKNOWN</td></tr>
+<tr><td>アンバランス</td><td>アンバランス</td></tr>
+<tr><td>アンモライト</td><td>アンモライト</td></tr>
+<tr><td>アークシェル</td><td>Ark Shell</td></tr>
+<tr><td>アークシステムワークス</td><td>ARC SYSTEM WORKS</td></tr>
+<tr><td>アークリオット</td><td>ArkRiot</td></tr>
+<tr><td>アージュ</td><td>age</td></tr>
+<tr><td>アーテル</td><td>アーテル</td></tr>
+<tr><td>アーデル</td><td>アーデル</td></tr>
+<tr><td>アートソフト</td><td>ArtSoft</td></tr>
+<tr><td>アートディンク</td><td>アートディンク</td></tr>
+<tr><td>アーバンプラント</td><td>アーバンプラント</td></tr>
+<tr><td>アーベル</td><td>Abel</td></tr>
+<tr><td>アーベルソフトウェア</td><td>AbelSoftware</td></tr>
+<tr><td>アールエーソフトウェア</td><td>R/A software</td></tr>
+<tr><td>イエティ</td><td>イエティ</td></tr>
+<tr><td>イクス</td><td>X[iks]</td></tr>
+<tr><td>イグジット</td><td>Ex-iT</td></tr>
+<tr><td>イグジット</td><td>EXIT</td></tr>
+<tr><td>イグニッションエンターテインメントリミテッド</td><td>イグニッション・エンターテインメント・リミテッド</td></tr>
+<tr><td>イザベラ</td><td>イザベラ</td></tr>
+<tr><td>イチゴフィズ</td><td>ICHIGO Fizz</td></tr>
+<tr><td>イチヒメ</td><td>いちひめ</td></tr>
+<tr><td>イチャラブドウ</td><td>いちゃらぶ堂</td></tr>
+<tr><td>イッシュー</td><td>issue</td></tr>
+<tr><td>イノセンス</td><td>Innocence</td></tr>
+<tr><td>イノセントグレイ</td><td>Innocent Grey</td></tr>
+<tr><td>イノヘッドスタジオ</td><td>イノヘッドスタジオ</td></tr>
+<tr><td>イビサ</td><td>Ibiza</td></tr>
+<tr><td>イマジニア</td><td>イマジニア</td></tr>
+<tr><td>イマディオ</td><td>イマディオ</td></tr>
+<tr><td>イメージワークス</td><td>IMAGE-WORKS</td></tr>
+<tr><td>イリュージョンソフト</td><td>ILLUSION SOFT(Dreams)</td></tr>
+<tr><td>イルパーナレーベル</td><td>Irupa-na Label</td></tr>
+<tr><td>イロドリ</td><td>IRODORI</td></tr>
+<tr><td>インカローズ</td><td>インカローズ</td></tr>
+<tr><td>インクリメントピー</td><td>インクリメントP</td></tr>
+<tr><td>インクルード</td><td>include</td></tr>
+<tr><td>インシンク</td><td>Insync</td></tr>
+<tr><td>インタラクティブブレインズ</td><td>インタラクティブブレインズ</td></tr>
+<tr><td>インターハート</td><td>INTERHEART</td></tr>
+<tr><td>インターハートキュート</td><td>INTERHEART Cute</td></tr>
+<tr><td>インターハートグロッシー</td><td>INTERHEART glossy</td></tr>
+<tr><td>インターハートスウィートハート</td><td>INTERHEART SweetHEART</td></tr>
+<tr><td>インタープラス</td><td>INTER+</td></tr>
+<tr><td>インターレックス</td><td>インターレックス</td></tr>
+<tr><td>インターレッツ</td><td>インターレッツ</td></tr>
+<tr><td>インティクリエイツ</td><td>インティ・クリエイツ</td></tr>
+<tr><td>インディゴ</td><td>INDIGO</td></tr>
+<tr><td>インビジブル</td><td>Invisible</td></tr>
+<tr><td>インレ</td><td>インレ</td></tr>
+<tr><td>イーアンツ</td><td>eants</td></tr>
+<tr><td>イーエスエス</td><td>ess</td></tr>
+<tr><td>イーエックストゥエルブ</td><td>EX12</td></tr>
+<tr><td>イージーオー</td><td>イージーオー</td></tr>
+<tr><td>イージーピージー</td><td>easy-peasy</td></tr>
+<tr><td>イージーモード</td><td>EasyMode</td></tr>
+<tr><td>イーロンド</td><td>eRONDO</td></tr>
+<tr><td>ウィッチス</td><td>WITCHS</td></tr>
+<tr><td>ウィッチフレーム</td><td>WitchFlame</td></tr>
+<tr><td>ウィンキーソフト</td><td>winkysoft</td></tr>
+<tr><td>ウィンタース</td><td>WINTERS</td></tr>
+<tr><td>ウィンライト</td><td>WINLIGHT</td></tr>
+<tr><td>ウイロウソフト</td><td>ういろうそふと</td></tr>
+<tr><td>ウインク</td><td>WINC</td></tr>
+<tr><td>ウイング</td><td>wing</td></tr>
+<tr><td>ウイングドクラウド</td><td>Winged Cloud</td></tr>
+<tr><td>ウインドミル</td><td>ういんどみる</td></tr>
+<tr><td>ウインドミルオアシス</td><td>ういんどみるOasis</td></tr>
+<tr><td>ウェディングケーキ</td><td>ウェディングケーキ</td></tr>
+<tr><td>ウェーブスター</td><td>WAVESTAR</td></tr>
+<tr><td>ウエンディーベル</td><td>WendyBell</td></tr>
+<tr><td>ウォーターフェニックス</td><td>ウォーターフェニックス</td></tr>
+<tr><td>ウグイスカグラ</td><td>ウグイスカグラ</td></tr>
+<tr><td>ウシミツソフト</td><td>ウシミツソフト</td></tr>
+<tr><td>ウツオノコイダウンロードページ</td><td>鬱夫の恋DLページ</td></tr>
+<tr><td>ウララ</td><td>うらら</td></tr>
+<tr><td>ウレセン</td><td>熟れ専</td></tr>
+<tr><td>エアリップ</td><td>AIRRIP</td></tr>
+<tr><td>エイエスエス</td><td>A.S.S(Abnormal Software Studio)</td></tr>
+<tr><td>エイチソフト</td><td>エイチソフト</td></tr>
+<tr><td>エイチプラス</td><td>H+</td></tr>
+<tr><td>エウシュリー</td><td>エウシュリー</td></tr>
+<tr><td>エクサム</td><td>EXAMU</td></tr>
+<tr><td>エクシングエンタテイメント</td><td>XING ENTERTAINMENT</td></tr>
+<tr><td>エクシーズ	</td><td>Xyz(有限会社スケアクロウ)</td></tr>
+<tr><td>エクスターン</td><td>extern</td></tr>
+<tr><td>エクステンド</td><td>eXtend</td></tr>
+<tr><td>エクスペリエンス</td><td>エクスペリエンス</td></tr>
+<tr><td>エクセプション</td><td>Exception</td></tr>
+<tr><td>エクレール</td><td>Eclair</td></tr>
+<tr><td>エグゼクリエイト</td><td>EXE CREATE</td></tr>
+<tr><td>エコール</td><td>エコールソフトウェア</td></tr>
+<tr><td>エスエヌケイ</td><td>SNK</td></tr>
+<tr><td>エスエヌケイプレイモア</td><td>SNK PLAYMORE</td></tr>
+<tr><td>エスクード</td><td>Escu:de</td></tr>
+<tr><td>エスケープバイシーク</td><td>ESC-APE by SEEC</td></tr>
+<tr><td>エスネオ</td><td>S-NEO</td></tr>
+<tr><td>エターナル</td><td>ETERNAL</td></tr>
+<tr><td>エチュード</td><td>etude</td></tr>
+<tr><td>エックスワン</td><td>EX-ONE</td></tr>
+<tr><td>エッチエムピー</td><td>h.m.p</td></tr>
+<tr><td>エッチラオッチラ</td><td>えっチラおっチラ</td></tr>
+<tr><td>エデンズフィール</td><td>EDENZFEEL</td></tr>
+<tr><td>エトワルズ</td><td>Etoiles</td></tr>
+<tr><td>エトワール</td><td>ETOILE</td></tr>
+<tr><td>エニシソフト</td><td>えにしそふと</td></tr>
+<tr><td>エニックス</td><td>ENIX</td></tr>
+<tr><td>エヌイーシーホームエレクトロニクス</td><td>NECホームエレクトロニクス</td></tr>
+<tr><td>エヌティーティーシュッパン</td><td>NTT出版</td></tr>
+<tr><td>エピックゲームス</td><td>EPIC GAMES</td></tr>
+<tr><td>エフアンドシー</td><td>F&amp;C</td></tr>
+<tr><td>エフアンドシーエフシーゼロイチ</td><td>F&amp;C FC01</td></tr>
+<tr><td>エフアンドシーエフシーゼロニ</td><td>F&amp;C FC02</td></tr>
+<tr><td>エフアンドシーハードカバー</td><td>F&amp;C HARDCOVER</td></tr>
+<tr><td>エフジー</td><td>FG</td></tr>
+<tr><td>エボル</td><td>evoLL</td></tr>
+<tr><td>エポックシャ</td><td>エポック社</td></tr>
+<tr><td>エムアクア</td><td>M ni AQUA</td></tr>
+<tr><td>エムオー</td><td>M-O</td></tr>
+<tr><td>エムナレッド</td><td>M na RED</td></tr>
+<tr><td>エムノジカン</td><td>Mの時間</td></tr>
+<tr><td>エムピンク</td><td>M de Pink</td></tr>
+<tr><td>エムヴァイオレット</td><td>M no VIOLET</td></tr>
+<tr><td>エリュシオン</td><td>Elysion</td></tr>
+<tr><td>エルエルパレス</td><td>L.L.Palace</td></tr>
+<tr><td>エルオーリリス</td><td>LO-LILITH</td></tr>
+<tr><td>エルコム</td><td>eelcom</td></tr>
+<tr><td>エルディア</td><td>El Dia</td></tr>
+<tr><td>エレオノーラ</td><td>Eleonora -エレオノーラ-</td></tr>
+<tr><td>エレクトリックアーツスクウェア</td><td>Electronic Arts Square</td></tr>
+<tr><td>エレクトリップ</td><td>エレクトリップ</td></tr>
+<tr><td>エレクトロニックアーツ</td><td>エレクトロニック・アーツ</td></tr>
+<tr><td>エレンシア</td><td>HERENCIA</td></tr>
+<tr><td>エロイット</td><td>エロイット</td></tr>
+<tr><td>エロティカピーチ</td><td>EROTICA PEACH</td></tr>
+<tr><td>エロティカブラック</td><td>EROTICA BLACK</td></tr>
+<tr><td>エロロ</td><td>Eroro</td></tr>
+<tr><td>エン</td><td>えん</td></tr>
+<tr><td>エンジェル</td><td>エンジェル</td></tr>
+<tr><td>エンジェルソフト</td><td>Angel Soft</td></tr>
+<tr><td>エンスカイアマダインサツカコウ</td><td>ensky（天田印刷加工）</td></tr>
+<tr><td>エンターグラム</td><td>エンターグラム</td></tr>
+<tr><td>エンターブレイン</td><td>エンターブレイン</td></tr>
+<tr><td>エンプティ</td><td>Empty</td></tr>
+<tr><td>エンプレス</td><td>Empress</td></tr>
+<tr><td>エヴィー</td><td>evee</td></tr>
+<tr><td>エーアイシースピリッツ</td><td>AICスピリッツ</td></tr>
+<tr><td>エーエスティー</td><td>AST</td></tr>
+<tr><td>オウル</td><td>owl</td></tr>
+<tr><td>オクチガコイビト</td><td>オクチが恋人</td></tr>
+<tr><td>オクトワークス</td><td>oct-works</td></tr>
+<tr><td>オズクラブ</td><td>OZクラブ</td></tr>
+<tr><td>オセロット</td><td>ocelot</td></tr>
+<tr><td>オチャノミズケンキュウジョ</td><td>お茶の水研究所</td></tr>
+<tr><td>オトコノコクラブ</td><td>おとこの娘倶楽部</td></tr>
+<tr><td>オトコノコクラブゼット</td><td>おとこの娘倶楽部Z</td></tr>
+<tr><td>オトコノコジダイ</td><td>おとこの娘時代</td></tr>
+<tr><td>オトメイト</td><td>オトメイト</td></tr>
+<tr><td>オノマトペ</td><td>onomatope*</td></tr>
+<tr><td>オノマトペラズベリー</td><td>onomatope* raspberry</td></tr>
+<tr><td>オヒメサマクラブ</td><td>お姫様倶楽部</td></tr>
+<tr><td>オフィスアジアケンキュウジョ</td><td>オフィスアジア研究所</td></tr>
+<tr><td>オフィスクリエイト</td><td>オフィスクリエイト</td></tr>
+<tr><td>オプティミスト</td><td>OPTIMIST</td></tr>
+<tr><td>オペラハウス</td><td>OPERA HOUSE</td></tr>
+<tr><td>オペレッタ</td><td>Operetta</td></tr>
+<tr><td>オペレッタデュエ</td><td>Operetta Due</td></tr>
+<tr><td>オメガスター</td><td>&omega;star</td></tr>
+<tr><td>オモチソフト</td><td>おもちそふと</td></tr>
+<tr><td>オルレインコウボウ</td><td>オルレイン工房</td></tr>
+<tr><td>オレンジエール</td><td>ORANGE YELL</td></tr>
+<tr><td>オーガスト</td><td>AUGUST</td></tr>
+<tr><td>オークソフト</td><td>ORCSOFT</td></tr>
+<tr><td>オーサリングヘヴン</td><td>オーサリングヘヴン</td></tr>
+<tr><td>オーバー</td><td>OVER</td></tr>
+<tr><td>オーバードライブ</td><td>OVERDRIVE</td></tr>
+<tr><td>オーバードーズ</td><td>オーバードーズ</td></tr>
+<tr><td>オーバーフロー</td><td>Overflow</td></tr>
+<tr><td>オービット</td><td>ORBIT-CACTUS</td></tr>
+<tr><td>オーレ</td><td>OLE</td></tr>
+<tr><td>オーレエム</td><td>OLE-M</td></tr>
+<tr><td>カイ</td><td>KAI</td></tr>
+<tr><td>カイハツシツピクセル</td><td>開発室Pixel</td></tr>
+<tr><td>カカオ</td><td>カカオ</td></tr>
+<tr><td>カクテルソフト</td><td>カクテル・ソフト</td></tr>
+<tr><td>カスケット</td><td>Casket</td></tr>
+<tr><td>カスタード</td><td>かすたーど</td></tr>
+<tr><td>カッパドウ</td><td>河童堂</td></tr>
+<tr><td>カティア</td><td>Catear</td></tr>
+<tr><td>カトレヤ</td><td>CATTLEYA</td></tr>
+<tr><td>カドカワゲームス</td><td>角川ゲームス</td></tr>
+<tr><td>カフス</td><td>CUFFS</td></tr>
+<tr><td>カブシキガイシャゴジュアルアーツ</td><td>株式会社ビジュアルアーツ</td></tr>
+<tr><td>カブシキガイシャサイゲームス</td><td>株式会社Cygames</td></tr>
+<tr><td>カブシキガイシャハイパーウェア</td><td>株式会社ハイパーウェア</td></tr>
+<tr><td>カプコン</td><td>CAPCOM</td></tr>
+<tr><td>カメンショウカイ</td><td>仮面商会</td></tr>
+<tr><td>カリンエンターテイメント</td><td>花梨エンターテイメント</td></tr>
+<tr><td>カリンシャノアールオメガ</td><td>花梨シャノアール オメガ</td></tr>
+<tr><td>カリントウ</td><td>karinto</td></tr>
+<tr><td>カルクル</td><td>Calcle</td></tr>
+<tr><td>カルミアエイト</td><td>Kalmia8</td></tr>
+<tr><td>カルミアスカーレット</td><td>Kalmia Scarlet</td></tr>
+<tr><td>カルム</td><td>calme</td></tr>
+<tr><td>カレンソフト</td><td>可憐ソフト</td></tr>
+<tr><td>カワウソソフト</td><td>かわうそソフト</td></tr>
+<tr><td>カーネリアン</td><td>CARNELIAN</td></tr>
+<tr><td>カーマイン</td><td>CARMINE</td></tr>
+<tr><td>ガイアエンターテイメント</td><td>ガイアエンターテイメント</td></tr>
+<tr><td>ガイナックス</td><td>GAINAX</td></tr>
+<tr><td>ガジェットソフト</td><td>GADGET SOFT</td></tr>
+<tr><td>ガス</td><td>GAS</td></tr>
+<tr><td>ガスト</td><td>ガスト</td></tr>
+<tr><td>ガストロ</td><td>GASTRO</td></tr>
+<tr><td>ガメンハジ</td><td>画面端</td></tr>
+<tr><td>ガレット</td><td>Galette</td></tr>
+<tr><td>ガンホーワークス</td><td>GungHo Works(Interchannel、NECインターチャネル)</td></tr>
+<tr><td>ガーデン</td><td>Garden</td></tr>
+<tr><td>ガーリーグレイブ</td><td>GIRLIE&dagger;GRAVE</td></tr>
+<tr><td>ガールズイーエーエー</td><td>girl&rsquo;s eaa</td></tr>
+<tr><td>ガールズソフトウェア</td><td>GIRL&rsquo;S SOFTWARE</td></tr>
+<tr><td>ガールズダイナミクス</td><td>girls dynamics</td></tr>
+<tr><td>キサナドゥ</td><td>XANADU</td></tr>
+<tr><td>キス</td><td>鱚</td></tr>
+<tr><td>キス</td><td>KISS</td></tr>
+<tr><td>キスマ</td><td>KISS-MA</td></tr>
+<tr><td>キチクヤロウ</td><td>鬼畜野郎</td></tr>
+<tr><td>キット</td><td>KIT</td></tr>
+<tr><td>キャットウォーク</td><td>catwalk</td></tr>
+<tr><td>キャットウォークネロ</td><td>catwalkNERO</td></tr>
+<tr><td>キャビット</td><td>Cabbit</td></tr>
+<tr><td>キャベツソフト</td><td>きゃべつそふと</td></tr>
+<tr><td>キャラメリア</td><td>キャラメリア</td></tr>
+<tr><td>キャラメリアトルテ</td><td>キャラメリアトルテ</td></tr>
+<tr><td>キャラメルボックス</td><td>キャラメルBOX</td></tr>
+<tr><td>キャララ</td><td>キャララ</td></tr>
+<tr><td>キャロルワークス</td><td>Carol Works</td></tr>
+<tr><td>キャンディソフト</td><td>CandySoft(きゃんでぃそふと)</td></tr>
+<tr><td>キャンディリップ</td><td>Candy Lip</td></tr>
+<tr><td>キャンパス</td><td>Campus</td></tr>
+<tr><td>キュンソフト</td><td>きゅんソフト</td></tr>
+<tr><td>キュークス</td><td>Q-X</td></tr>
+<tr><td>キュートラッシュ</td><td>CuteRush</td></tr>
+<tr><td>キュービ</td><td>KYUBI</td></tr>
+<tr><td>キューブ</td><td>CUBE</td></tr>
+<tr><td>キングダム</td><td>Kingdom</td></tr>
+<tr><td>キングレコード</td><td>キングレコード</td></tr>
+<tr><td>キー</td><td>Key</td></tr>
+<tr><td>キー</td><td>key</td></tr>
+<tr><td>ギガ</td><td>戯画</td></tr>
+<tr><td>ギガスドロップ</td><td>GigasDrop.</td></tr>
+<tr><td>ギザジュウ</td><td>Giza10</td></tr>
+<tr><td>ギズモ</td><td>GIZMO</td></tr>
+<tr><td>ギミックハウス</td><td>ギミックハウス</td></tr>
+<tr><td>ギャラクティカ</td><td>GALACTICA</td></tr>
+<tr><td>ギャルプリンス</td><td>ギャルプリンス</td></tr>
+<tr><td>ギュウニュウセンシャ</td><td>牛乳戦車</td></tr>
+<tr><td>ギルティ</td><td>Guilty</td></tr>
+<tr><td>ギルティエックス</td><td>Guilty eX</td></tr>
+<tr><td>ギルティマテリアル</td><td>Guilty&times;material</td></tr>
+<tr><td>ギルティーノベル</td><td>GuiltyN</td></tr>
+<tr><td>ギルティープラス</td><td>Guilty＋</td></tr>
+<tr><td>ギンドケイ</td><td>銀時計</td></tr>
+<tr><td>クインスソフト</td><td>QUINCE SOFT</td></tr>
+<tr><td>クエスト</td><td>クエスト</td></tr>
+<tr><td>クライン</td><td>KLEIN</td></tr>
+<tr><td>クラインシロップ</td><td>KLEINシロップ</td></tr>
+<tr><td>クラウド</td><td>CROWD</td></tr>
+<tr><td>クラゲクラプ</td><td>海月倶楽部</td></tr>
+<tr><td>クラップワークス</td><td>CLAPWORKS</td></tr>
+<tr><td>クリアキューブ</td><td>クリアキューブ</td></tr>
+<tr><td>クリアソフト</td><td>CLEAT SOFT</td></tr>
+<tr><td>クリオネ</td><td>Clione</td></tr>
+<tr><td>クリカラワークス</td><td>クリカラワークス</td></tr>
+<tr><td>クリスタルエイゾウ</td><td>クリスタル映像</td></tr>
+<tr><td>クリスタルビジョン</td><td>CRYSTAL VISION</td></tr>
+<tr><td>クリップクラフト</td><td>CLIP☆CRAFT</td></tr>
+<tr><td>クリフエッジ</td><td>Cliff Edge</td></tr>
+<tr><td>クリムゾンエスエス</td><td>クリムゾンSS</td></tr>
+<tr><td>クリーミートリップス</td><td>クリーミートリップス</td></tr>
+<tr><td>クリームパイ</td><td>CreamPie</td></tr>
+<tr><td>クルマレテル</td><td>Kur-Mar-Ter(クルマレテル)</td></tr>
+<tr><td>クレスト</td><td>クレスト</td></tr>
+<tr><td>クロコ</td><td>KuroCo</td></tr>
+<tr><td>クロシェット</td><td>Clochette</td></tr>
+<tr><td>クロスウィンド</td><td>XWind</td></tr>
+<tr><td>クロスオーバー</td><td>CrossOver</td></tr>
+<tr><td>クロスチャンネル</td><td>CROSS&dagger;CHANNEL</td></tr>
+<tr><td>クロストーク</td><td>Cross Talk</td></tr>
+<tr><td>クロスネットパイ</td><td>Crossnet-Pie</td></tr>
+<tr><td>クロックアップ</td><td>CLOCKUP</td></tr>
+<tr><td>クロニャン</td><td>くろにゃん</td></tr>
+<tr><td>クロヒナ</td><td>黒雛</td></tr>
+<tr><td>クロヒメ</td><td>黒姫</td></tr>
+<tr><td>クロムウェル</td><td>Cromwell</td></tr>
+<tr><td>クロムシックス</td><td>CHROME SIX</td></tr>
+<tr><td>クロリリム</td><td>黒LiLiM</td></tr>
+<tr><td>クロワソフト</td><td>CroixSoft</td></tr>
+<tr><td>クロン</td><td>クロン</td></tr>
+<tr><td>クローバー</td><td>CLOVER</td></tr>
+<tr><td>クーブランド</td><td>Qoo brand</td></tr>
+<tr><td>クールキッズ</td><td>KOOL KIZZ</td></tr>
+<tr><td>グッドスマイルカンパニー</td><td>GOOD SMILE COMPANY</td></tr>
+<tr><td>グミソフト</td><td>ぐみそふと</td></tr>
+<tr><td>グラストンベリー</td><td>Glastonbury</td></tr>
+<tr><td>グラッセ</td><td>GLace</td></tr>
+<tr><td>グラビス</td><td>GRAVIS</td></tr>
+<tr><td>グラビトン</td><td>Graviton</td></tr>
+<tr><td>グラムス</td><td>グラムス</td></tr>
+<tr><td>グランクリュ</td><td>Grand Cru</td></tr>
+<tr><td>グランズ</td><td>GLANZ</td></tr>
+<tr><td>グリスエッジ</td><td>GRISEDGE</td></tr>
+<tr><td>グリーンバニー</td><td>グリーンバニー</td></tr>
+<tr><td>グロリア</td><td>Gloria</td></tr>
+<tr><td>グローサー</td><td>グローサー</td></tr>
+<tr><td>グローバルエーエンタテイメント</td><td>Global A Entertainment</td></tr>
+<tr><td>ケイジ</td><td>CAGE</td></tr>
+<tr><td>ケイブ</td><td>CAVE</td></tr>
+<tr><td>ケムコ</td><td>KEMCO</td></tr>
+<tr><td>ケロキュー</td><td>ケロQ</td></tr>
+<tr><td>ケロマクラ</td><td>けろ枕</td></tr>
+<tr><td>ゲイジ</td><td>Gage</td></tr>
+<tr><td>ゲッカヒョウジン</td><td>月下氷人</td></tr>
+<tr><td>ゲンカクドウ</td><td>幻覚堂</td></tr>
+<tr><td>ゲンキ</td><td>元気</td></tr>
+<tr><td>ゲンサイ</td><td>幻斎</td></tr>
+<tr><td>ゲーセンイチハチ</td><td>げーせん18</td></tr>
+<tr><td>ゲームアーツ</td><td>GAME ARTS</td></tr>
+<tr><td>ゲームスタジオ</td><td>ゲームスタジオ</td></tr>
+<tr><td>ゲームバンク</td><td>GameBank</td></tr>
+<tr><td>コアダスク</td><td>CORE-DUSK</td></tr>
+<tr><td>コアマガジン</td><td>コアマガジン</td></tr>
+<tr><td>コアモアコ</td><td>CoreMoreco</td></tr>
+<tr><td>コインソフトウェア</td><td>Coin-Software</td></tr>
+<tr><td>コウガドウスタジオ</td><td>工画堂スタジオ</td></tr>
+<tr><td>コウダンシャ</td><td>講談社</td></tr>
+<tr><td>コウビ</td><td>広美</td></tr>
+<tr><td>コクチョウ</td><td>黒鳥</td></tr>
+<tr><td>ココエバー</td><td>COCOEVER</td></tr>
+<tr><td>コスモス</td><td>COSMOS</td></tr>
+<tr><td>コスモスコンピューター</td><td>コスモスコンピューター</td></tr>
+<tr><td>コズミックキュート</td><td>COSMIC CUTE</td></tr>
+<tr><td>コットンソフト</td><td>コットンソフト</td></tr>
+<tr><td>コナミ</td><td>KONAMI</td></tr>
+<tr><td>コネコソフト</td><td>こねこソフト</td></tr>
+<tr><td>コパンダ</td><td>こぱんだ</td></tr>
+<tr><td>コビトスタジオ</td><td>こびとスタジオ</td></tr>
+<tr><td>コマヤ</td><td>駒屋</td></tr>
+<tr><td>コムチャンネル</td><td>コムちゃんねる</td></tr>
+<tr><td>コレクション</td><td>collection</td></tr>
+<tr><td>コレット</td><td>CORETT</td></tr>
+<tr><td>コロン</td><td>：co/on</td></tr>
+<tr><td>コンセプト</td><td>CONCEPT</td></tr>
+<tr><td>コンパイルハート</td><td>コンパイルハート</td></tr>
+<tr><td>コンパス</td><td>COMPASS</td></tr>
+<tr><td>コンフィチュールソフト</td><td>コンフィチュールソフト</td></tr>
+<tr><td>コンフォート</td><td>COMFORT</td></tr>
+<tr><td>コンプリーツ</td><td>コンプリーツ</td></tr>
+<tr><td>コーエー</td><td>コーエー(光栄)</td></tr>
+<tr><td>コーエーテクモゲームス</td><td>コーエーテクモゲームス</td></tr>
+<tr><td>コードピンク</td><td>CODEPINK</td></tr>
+<tr><td>コーラス</td><td>chorus</td></tr>
+<tr><td>ゴクフェロ</td><td>極フェロ</td></tr>
+<tr><td>ゴンドラ</td><td>GONDOLA</td></tr>
+<tr><td>サイ</td><td>彩[Xai]</td></tr>
+<tr><td>サイク</td><td>Cyc</td></tr>
+<tr><td>サイクノノス</td><td>CYC NO-NOS</td></tr>
+<tr><td>サイクレット</td><td>CYCLET</td></tr>
+<tr><td>サイクロゼ</td><td>Cyc Rose</td></tr>
+<tr><td>サイドビーニセンジュウヨネン</td><td>side-B(2014年-)</td></tr>
+<tr><td>サウンドウィング</td><td>サウンド・ウィング</td></tr>
+<tr><td>サガプラネッツ</td><td>SAGA PLANETS</td></tr>
+<tr><td>サクセス</td><td>サクセス</td></tr>
+<tr><td>サミー</td><td>サミー</td></tr>
+<tr><td>サモエドスマイル</td><td>SAMOYED SMILE</td></tr>
+<tr><td>サルコウボウ</td><td>猿工房</td></tr>
+<tr><td>サンクチュアリ</td><td>サンクチュアリ</td></tr>
+<tr><td>サンシュッパン</td><td>サン出版</td></tr>
+<tr><td>サンソフト</td><td>サンソフト</td></tr>
+<tr><td>サンダルダッシュ</td><td>SandalDash</td></tr>
+<tr><td>サンワシュッパン</td><td>三和出版</td></tr>
+<tr><td>サヴァイブ</td><td>Survive</td></tr>
+<tr><td>サーカス</td><td>CIRCUS</td></tr>
+<tr><td>サークルテクア</td><td>さーくるてくあ</td></tr>
+<tr><td>サードアイ</td><td>3rdEye</td></tr>
+<tr><td>サードアイ</td><td>3rdeye</td></tr>
+<tr><td>サーモンソフト</td><td>SALMON SOFT</td></tr>
+<tr><td>ザイオン</td><td>ZION</td></tr>
+<tr><td>ザインソフト</td><td>ザインソフト</td></tr>
+<tr><td>ザウス</td><td>XUSE</td></tr>
+<tr><td>ザウルス</td><td>ザウルス</td></tr>
+<tr><td>ザックザック</td><td>ざっくざっく</td></tr>
+<tr><td>ザフィーア</td><td>Saphir</td></tr>
+<tr><td>シアン</td><td>Chien</td></tr>
+<tr><td>シェリー</td><td>Cheri</td></tr>
+<tr><td>シェルフ</td><td>Shelf</td></tr>
+<tr><td>シエル</td><td>Ciel</td></tr>
+<tr><td>シコ</td><td>cico</td></tr>
+<tr><td>シジュウハッテ</td><td>48Te</td></tr>
+<tr><td>シス</td><td>SITH</td></tr>
+<tr><td>システムソフトアルファ</td><td>SystemSoft Alpha(SystemSoft)</td></tr>
+<tr><td>シズ</td><td>静</td></tr>
+<tr><td>シチチンマンポウ</td><td>七珍万宝</td></tr>
+<tr><td>シチミトウガラシダン</td><td>七味とうがらし団</td></tr>
+<tr><td>シトロンソフト</td><td>しとろんソフト</td></tr>
+<tr><td>シネマトグラフ</td><td>CINEMATOGRAPH</td></tr>
+<tr><td>シムス</td><td>SIMS</td></tr>
+<tr><td>シャルラクプラス</td><td>シャルラクプラス</td></tr>
+<tr><td>シャーベットソフト</td><td>SherbetSoft</td></tr>
+<tr><td>シュガーキューブ</td><td>シュガーキューブ</td></tr>
+<tr><td>シュガービーンズ</td><td>シュガービーンズ</td></tr>
+<tr><td>シュガーポット</td><td>Sugar pot</td></tr>
+<tr><td>シュコア</td><td>SCORE【しゅこあ!】</td></tr>
+<tr><td>ショウエイシャ</td><td>翔泳社</td></tr>
+<tr><td>ショウガクカンシュウエイシャプロダクションショウガクカンプロダクション</td><td>小学館集英社プロダクション(小学館プロダクション)</td></tr>
+<tr><td>ショク</td><td>SYOKU</td></tr>
+<tr><td>ショコラティエ</td><td>ショコラティエ</td></tr>
+<tr><td>シラタマ</td><td>しらたま</td></tr>
+<tr><td>シリウス</td><td>Sirius</td></tr>
+<tr><td>シルキーズサクラ</td><td>シルキーズSAKURA</td></tr>
+<tr><td>シルキーズプラス</td><td>シルキーズプラス</td></tr>
+<tr><td>シルキーズプラスアルファ</td><td>シルキーズプラスアルファ</td></tr>
+<tr><td>シルフィールフォルテッシモ</td><td>SYLPHYLE fortissimo</td></tr>
+<tr><td>シロイパンツ</td><td>しろいぱんつ</td></tr>
+<tr><td>シロクマダンゴ</td><td>しろくまだんご</td></tr>
+<tr><td>シロップ</td><td>シロップ</td></tr>
+<tr><td>シロップハニースイート</td><td>SYRUP -Honey Sweet-</td></tr>
+<tr><td>シロップメニーミルク</td><td>SYRUP -many milk-</td></tr>
+<tr><td>シロニャン</td><td>しろにゃん</td></tr>
+<tr><td>シンビョウプランニング</td><td>シンビョウプランニング</td></tr>
+<tr><td>シンフォニー</td><td>Symphony</td></tr>
+<tr><td>シーエスケイ</td><td>CSK</td></tr>
+<tr><td>シーク</td><td>SEEC inc.</td></tr>
+<tr><td>シードライブ</td><td>C:drive.</td></tr>
+<tr><td>シードライブスラッシュエフ</td><td>C:drive/F</td></tr>
+<tr><td>シープ</td><td>sheep</td></tr>
+<tr><td>シーライオン</td><td>SeaLion</td></tr>
+<tr><td>シールクオリア</td><td>seal-QUALIA</td></tr>
+<tr><td>シールチュチュ</td><td>seal-tutu</td></tr>
+<tr><td>ジィスポット</td><td>じぃすぽっと</td></tr>
+<tr><td>ジェイネットハックプロジェクト</td><td>JNetHack Project</td></tr>
+<tr><td>ジェネックス</td><td>GeneX</td></tr>
+<tr><td>ジェリーフィッシュ</td><td>Jellyfish</td></tr>
+<tr><td>ジェーシースタッフ</td><td>ジェー・シー・スタッフ</td></tr>
+<tr><td>ジグラットワークス</td><td>Xiguratt Works</td></tr>
+<tr><td>ジタクスタジオ</td><td>自宅すたじお</td></tr>
+<tr><td>ジダイヤ</td><td>時代屋</td></tr>
+<tr><td>ジックス</td><td>ZyX</td></tr>
+<tr><td>ジテンシャソウギョウ</td><td>自転車創業</td></tr>
+<tr><td>ジャニス</td><td>JANIS</td></tr>
+<tr><td>ジャノミチハヘビソフト</td><td>蛇ノ道ハ蛇ソフト</td></tr>
+<tr><td>ジャパンホームビデオ</td><td>ジャパンホームビデオ</td></tr>
+<tr><td>ジュウサンシーシー</td><td>13cc</td></tr>
+<tr><td>ジュウサンセンチ</td><td>13cm</td></tr>
+<tr><td>ジュエル</td><td>ジュエル</td></tr>
+<tr><td>ジュクジョジダイ</td><td>熟女時代</td></tr>
+<tr><td>ジョーカー</td><td>JOKER</td></tr>
+<tr><td>ジライソフト</td><td>地雷ソフト</td></tr>
+<tr><td>ジン</td><td>JIN</td></tr>
+<tr><td>ジーエヌソフトウェア</td><td>GN Software</td></tr>
+<tr><td>ジーキャット</td><td>G-CAT</td></tr>
+<tr><td>ジークレフ</td><td>g-clef</td></tr>
+<tr><td>ジージェイ</td><td>G.J?</td></tr>
+<tr><td>ジーズ</td><td>G&rsquo;z</td></tr>
+<tr><td>スイート</td><td>SWeet</td></tr>
+<tr><td>スイートティー</td><td>SWEET&amp;TEA</td></tr>
+<tr><td>スウィートライト</td><td>Sweet light</td></tr>
+<tr><td>スカイシンクシステム</td><td>スカイ・シンク・システム</td></tr>
+<tr><td>スカイスフィア</td><td>skysphere</td></tr>
+<tr><td>スカイフィッシュ</td><td>SkyFish</td></tr>
+<tr><td>スカイフィッシュポコ</td><td>SkyFish poco</td></tr>
+<tr><td>スカラドギ</td><td>Sukaradog</td></tr>
+<tr><td>スカンクワークス</td><td>SKUNKWORKS</td></tr>
+<tr><td>スカンクワークスナノ</td><td>SKUNKWORKS nano.</td></tr>
+<tr><td>スクイーズ</td><td>SQUEEZ</td></tr>
+<tr><td>スクイーズスイート</td><td>SQUEEZ sweet</td></tr>
+<tr><td>スクウェア</td><td>SQUARE</td></tr>
+<tr><td>スクウェアエニックス</td><td>スクウェア・エニックス</td></tr>
+<tr><td>スクランブルハウス</td><td>ScrambleHOUSE</td></tr>
+<tr><td>スコア</td><td>SCORE</td></tr>
+<tr><td>スコット</td><td>スコット</td></tr>
+<tr><td>スタイルウォーカー</td><td>StyleWalker</td></tr>
+<tr><td>スタジオインセイン</td><td>Studio Insane</td></tr>
+<tr><td>スタジオウバイ</td><td>スタジオ奪</td></tr>
+<tr><td>スタジオエア</td><td>Studio Air</td></tr>
+<tr><td>スタジオエゴ</td><td>Studio e.go!</td></tr>
+<tr><td>スタジオオルカ</td><td>studioオルカ</td></tr>
+<tr><td>スタジオカグラ</td><td>スタジオ神楽</td></tr>
+<tr><td>スタジオカメ</td><td>スタジオカメ</td></tr>
+<tr><td>スタジオキンキー</td><td>STUDIO KINKY</td></tr>
+<tr><td>スタジオジャレン</td><td>Studio 邪恋</td></tr>
+<tr><td>スタジオパンドラ</td><td>STUDIO PANDORA</td></tr>
+<tr><td>スタジオフォリオ</td><td>Studio FOGLIO</td></tr>
+<tr><td>スタジオブランケット</td><td>studio blanket</td></tr>
+<tr><td>スタジオメビウス</td><td>Studio Mebius</td></tr>
+<tr><td>スタジオライム</td><td>スタジオライム</td></tr>
+<tr><td>スタジオリョクチャ</td><td>すたじお緑茶</td></tr>
+<tr><td>スタックソフトウェア</td><td>STACK software</td></tr>
+<tr><td>スタッフィング</td><td>スタッフィング</td></tr>
+<tr><td>スターゲイザー</td><td>STARGAZER</td></tr>
+<tr><td>スターフィッシュ</td><td>STAR☆FISH</td></tr>
+<tr><td>スターライトマリー</td><td>スターライトマリー</td></tr>
+<tr><td>スティング</td><td>STING</td></tr>
+<tr><td>ステラ</td><td>STELLA</td></tr>
+<tr><td>ステラワース</td><td>ステラワース</td></tr>
+<tr><td>ストライクス</td><td>STRIKES</td></tr>
+<tr><td>ストライプフィーチャリングギガ</td><td>STRIPE feat.GIGA</td></tr>
+<tr><td>ストラトス</td><td>ストラトス</td></tr>
+<tr><td>ストレート</td><td>すとれーと </td></tr>
+<tr><td>ストーンヘッズ</td><td>STONE HEADS</td></tr>
+<tr><td>スナックファクトリー</td><td>スナック・ファクトリー</td></tr>
+<tr><td>スナップドラゴン</td><td>Snapdragon</td></tr>
+<tr><td>スノー </td><td>SNOW </td></tr>
+<tr><td>スパイクチュンソフト</td><td>スパイク・チュンソフト</td></tr>
+<tr><td>スピカ</td><td>スピカ</td></tr>
+<tr><td>スピカ</td><td>SPICA</td></tr>
+<tr><td>スピリットワークス</td><td>SpiritWorks</td></tr>
+<tr><td>スピンドル</td><td>スピンドル</td></tr>
+<tr><td>スピーシャス</td><td>specious</td></tr>
+<tr><td>スピード</td><td>SPEED</td></tr>
+<tr><td>スピードハイブリッド</td><td>SPEED HYBRID</td></tr>
+<tr><td>スフィア</td><td>Sphere</td></tr>
+<tr><td>スプライ</td><td>Spray</td></tr>
+<tr><td>スプライト</td><td>sprite</td></tr>
+<tr><td>スプラッシュ</td><td>SPLASH(DOTMAN系列)</td></tr>
+<tr><td>スプラッシュ</td><td>SPLUSH（すぺじゃに系列）</td></tr>
+<tr><td>スペースプロジェクト</td><td>SPACE PROJECT</td></tr>
+<tr><td>スペースワークス</td><td>SPACEWORKS</td></tr>
+<tr><td>スミッコソフト</td><td>すみっこソフト</td></tr>
+<tr><td>スミレ</td><td>スミレ</td></tr>
+<tr><td>スミー</td><td>SMEE</td></tr>
+<tr><td>スリーデイジー</td><td>3Daisy</td></tr>
+<tr><td>スワット</td><td>SWAT</td></tr>
+<tr><td>スワン</td><td>スワン</td></tr>
+<tr><td>スワンアイ</td><td>スワンアイ</td></tr>
+<tr><td>スワンアイプラス</td><td>スワンアイ+</td></tr>
+<tr><td>スワンマニア</td><td>スワンマニア</td></tr>
+<tr><td>ズー</td><td>ZOO</td></tr>
+<tr><td>ズーム</td><td>ZOOM</td></tr>
+<tr><td>セイブカイハツ</td><td>セイブ開発</td></tr>
+<tr><td>セイブキカク</td><td>西武企画</td></tr>
+<tr><td>セイレーン</td><td>セイレーン</td></tr>
+<tr><td>セイント</td><td>SAINT</td></tr>
+<tr><td>セカイプロジェクト</td><td>Sekai Project</td></tr>
+<tr><td>セガゲームス</td><td>セガゲームス</td></tr>
+<tr><td>セグエラボラトリー</td><td>SEGUE LABORATORY</td></tr>
+<tr><td>セデュース</td><td>SEDUCE</td></tr>
+<tr><td>セブンエイト</td><td>セブンエイト</td></tr>
+<tr><td>セブンワンダー</td><td>SEVEN WONDER</td></tr>
+<tr><td>セレス</td><td>CERES</td></tr>
+<tr><td>セレナーデ</td><td>Selenade</td></tr>
+<tr><td>セレン</td><td>Selen</td></tr>
+<tr><td>セレンディピティ</td><td>セレンディピティ</td></tr>
+<tr><td>センズ</td><td>Senz</td></tr>
+<tr><td>セントミカエルジョシガクエン</td><td>聖ミカエル女子学園</td></tr>
+<tr><td>センノウバーサスサイミン</td><td>洗脳VS催眠</td></tr>
+<tr><td>ゼネラルソフトウェア</td><td>ゼネラルソフトウェア</td></tr>
+<tr><td>ゼロ</td><td>ZERO</td></tr>
+<tr><td>ゼロキカイナセカイ</td><td>ZERO（奇怪な世界）</td></tr>
+<tr><td>ゼロクール</td><td>ゼロクール</td></tr>
+<tr><td>ソクラテス</td><td>ソクラテス</td></tr>
+<tr><td>ソニア</td><td>SOGNA</td></tr>
+<tr><td>ソニーインタラクティブエンタテインメントソニーコンピューターエンターテイメント</td><td>SIEJA(SCEI)</td></tr>
+<tr><td>ソニーミュージックエンターテイメント</td><td>SME</td></tr>
+<tr><td>ソネットコンピュータエンタテイメント</td><td>ソネット・コンピュータエンタテイメント</td></tr>
+<tr><td>ソフィア</td><td>Sophia</td></tr>
+<tr><td>ソフトウェアハウスパセリ</td><td>ソフトウェアハウスぱせり</td></tr>
+<tr><td>ソフトガレージ</td><td>ソフトガレージ</td></tr>
+<tr><td>ソフトハウスキャラ</td><td>ソフトハウスキャラ</td></tr>
+<tr><td>ソフトハウスシール</td><td>softhouse-seal</td></tr>
+<tr><td>ソフトハウスシールグランデ</td><td>softhouse-seal GRANDEE</td></tr>
+<tr><td>ソフトハウスラーク</td><td>ソフトハウスラーク</td></tr>
+<tr><td>ソフトプロ</td><td>ソフトプロ</td></tr>
+<tr><td>ソラハネ</td><td>SORAHANE</td></tr>
+<tr><td>ソラユメ</td><td>そらゆめ</td></tr>
+<tr><td>ソラン</td><td>SOLAN</td></tr>
+<tr><td>ソルシエール</td><td>ソルシエール</td></tr>
+<tr><td>ソレイル</td><td>Soleil</td></tr>
+<tr><td>ソワール</td><td>SOIR</td></tr>
+<tr><td>タイガーソフト</td><td>タイガーソフト</td></tr>
+<tr><td>タイトー</td><td>タイトー</td></tr>
+<tr><td>タイプス</td><td>Types</td></tr>
+<tr><td>タイプムーン</td><td>TYPE-MOON</td></tr>
+<tr><td>タイムポイント</td><td>タイムポイント</td></tr>
+<tr><td>タイラント</td><td>TYRANT</td></tr>
+<tr><td>タイレルピッコロ</td><td>たいれるPiccolo</td></tr>
+<tr><td>タイレルラボ</td><td>TYRELL LAB.</td></tr>
+<tr><td>タカヤシキカイハツ</td><td>高屋敷開発</td></tr>
+<tr><td>タカラ</td><td>タカラ</td></tr>
+<tr><td>タカラトミー</td><td>タカラトミー</td></tr>
+<tr><td>タキコーポレーション</td><td>タキコーポレーション</td></tr>
+<tr><td>タクティカルシンパシー</td><td>タクティカルシンパシー</td></tr>
+<tr><td>タクティクス</td><td>Tactics</td></tr>
+<tr><td>タクミ</td><td>匠</td></tr>
+<tr><td>タクヨウ</td><td>TAKUYO</td></tr>
+<tr><td>タケ</td><td>TAKE</td></tr>
+<tr><td>タチカワソフトウェア</td><td>たちかわソフトウェア</td></tr>
+<tr><td>タッチャブル</td><td>TOUCHABLE</td></tr>
+<tr><td>タナカブラザーズ</td><td>田中ブラザーズ</td></tr>
+<tr><td>タヌキソフト</td><td>たぬきそふと</td></tr>
+<tr><td>タマクロ</td><td>たまくろ</td></tr>
+<tr><td>タマモソフト</td><td>玉藻ソフト</td></tr>
+<tr><td>タムズ</td><td>Tam&rsquo;s</td></tr>
+<tr><td>タンジェリン</td><td>Tangerine</td></tr>
+<tr><td>タンジェントシータ</td><td>tangent&theta;</td></tr>
+<tr><td>ダイキ</td><td>ダイキ</td></tr>
+<tr><td>ダイダイ</td><td>だいだい</td></tr>
+<tr><td>ダイナミックプロダクション</td><td>ダイナミックプロダクション</td></tr>
+<tr><td>ダル</td><td>DALL</td></tr>
+<tr><td>ダンコ</td><td>DaNCO</td></tr>
+<tr><td>ダンデライオン</td><td>だんでらいおん</td></tr>
+<tr><td>ダークアマリリス</td><td>ダークアマリリス</td></tr>
+<tr><td>ダークスワン</td><td>ダークスワン</td></tr>
+<tr><td>ダークネスポット</td><td>DarknessPot</td></tr>
+<tr><td>チェックポイント</td><td>Check-Point</td></tr>
+<tr><td>チェルシーソフト</td><td>Chelseasoft</td></tr>
+<tr><td>チセ</td><td>千世</td></tr>
+<tr><td>チトセ</td><td>千歳</td></tr>
+<tr><td>チャリオット</td><td>Chariot</td></tr>
+<tr><td>チャンピオンソフト</td><td>チャンピオンソフト</td></tr>
+<tr><td>チャームファクトリー</td><td>魅了工房</td></tr>
+<tr><td>チュアブルソフト</td><td>Chuablesoft</td></tr>
+<tr><td>チョコ</td><td>CHOCO</td></tr>
+<tr><td>チョココ</td><td>chococo</td></tr>
+<tr><td>チロル</td><td>チロル</td></tr>
+<tr><td>チームポップアップ</td><td>TEAM POPUP</td></tr>
+<tr><td>チームムラマサ</td><td>Team Muramasa</td></tr>
+<tr><td>ツァイト</td><td>Zeit</td></tr>
+<tr><td>ツクダシナジー</td><td>ツクダシナジー</td></tr>
+<tr><td>ツボミソフト</td><td>つぼみソフト</td></tr>
+<tr><td>ツミキソフト</td><td>つみきそふと</td></tr>
+<tr><td>ツムギ</td><td>tumugi</td></tr>
+<tr><td>ツルミク</td><td>つるみく</td></tr>
+<tr><td>ツルミクアナザー</td><td>つるみく -Another-</td></tr>
+<tr><td>ティアラモード</td><td>Tiaramode</td></tr>
+<tr><td>ティラミスヴィラ</td><td>TIRAMISUVILLA</td></tr>
+<tr><td>ティンカーベル</td><td>TinkerBell</td></tr>
+<tr><td>ティンクルポジション</td><td>Tinkle Position</td></tr>
+<tr><td>ティンコーベル</td><td>てぃんこーべる</td></tr>
+<tr><td>ティーアンドイーソフト</td><td>T&amp;E SOFT</td></tr>
+<tr><td>ティーアンドエム</td><td>T&amp;M</td></tr>
+<tr><td>ティーエスエル</td><td>TSL</td></tr>
+<tr><td>ティークラウン</td><td>TEA-CROWN</td></tr>
+<tr><td>ティーグル</td><td>てぃ～ぐる</td></tr>
+<tr><td>ティージェイアール</td><td>TJR(THE JOLLY ROGER)</td></tr>
+<tr><td>ティーター</td><td>T2</td></tr>
+<tr><td>ティーディーケーコア</td><td>TDKコア</td></tr>
+<tr><td>ティープロジェクト</td><td>TeaProject</td></tr>
+<tr><td>テイクアウト</td><td>TAKE OUT</td></tr>
+<tr><td>テイル</td><td>Tail</td></tr>
+<tr><td>テクノスジャパン</td><td>TECHNOS</td></tr>
+<tr><td>テクノソフト</td><td>Tecno Soft</td></tr>
+<tr><td>テクノポリスソフト</td><td>テクノポリスソフト</td></tr>
+<tr><td>テスラ</td><td>TESLA</td></tr>
+<tr><td>テックアーツ</td><td>Tech Arts</td></tr>
+<tr><td>テックアーツスリーディー</td><td>Tech Arts3D</td></tr>
+<tr><td>テックジャイアン</td><td>TECH GIAN</td></tr>
+<tr><td>テックジャイアンアーカイブ</td><td>TECH GIANアーカイブ</td></tr>
+<tr><td>テトラ</td><td>tetra</td></tr>
+<tr><td>テリオス</td><td>Terios</td></tr>
+<tr><td>テレビアサヒ</td><td>ＴＶ朝日</td></tr>
+<tr><td>テンクラップス</td><td>tenclaps</td></tr>
+<tr><td>テングプロ</td><td>天狗プロ</td></tr>
+<tr><td>テンコ</td><td>天狐</td></tr>
+<tr><td>テンシトアクマ</td><td>天使と悪魔</td></tr>
+<tr><td>テンシンドウ</td><td>天津堂</td></tr>
+<tr><td>テンマイル</td><td>10mile</td></tr>
+<tr><td>ディアー</td><td>DE@R</td></tr>
+<tr><td>ディサベル</td><td>DisAbel</td></tr>
+<tr><td>ディファレンシア</td><td>Differencia</td></tr>
+<tr><td>ディレッタン</td><td>ディレッタン</td></tr>
+<tr><td>ディレッタント</td><td>ディレッタント</td></tr>
+<tr><td>ディーエヌエー</td><td>DNA</td></tr>
+<tr><td>ディーエルサイトコム</td><td>ディーエルサイトコム</td></tr>
+<tr><td>ディーオー</td><td>D.O.(ディーオー)</td></tr>
+<tr><td>ディースリーパブリッシャー</td><td>D3 PUBLISHER INC.</td></tr>
+<tr><td>ディードライブ</td><td>D:drive.</td></tr>
+<tr><td>ディーパワー</td><td>D-Power</td></tr>
+<tr><td>ディーパー</td><td>DEEPER</td></tr>
+<tr><td>デイジーデイジー</td><td>Daisy2</td></tr>
+<tr><td>デイジーフィーチャリングギガ</td><td>daisy feat.戯画</td></tr>
+<tr><td>デイスクライマックス</td><td>DEZ CLIMAX</td></tr>
+<tr><td>デザイアショウギョウ</td><td>DESIRE(商業)</td></tr>
+<tr><td>デジアニメコーポレイション</td><td>デジアニメ・コーポレイション</td></tr>
+<tr><td>デジタルキュート</td><td>Digital Cute</td></tr>
+<tr><td>デジタルジーパワー</td><td>デジタルGパワー</td></tr>
+<tr><td>デジタルトリックス</td><td>Digital Tricks</td></tr>
+<tr><td>デジタルメディアマート</td><td>DMM</td></tr>
+<tr><td>デジタルモンキー</td><td>電脳猿</td></tr>
+<tr><td>デジターボ</td><td>デジターボ</td></tr>
+<tr><td>デビルシール</td><td>Devil-seal</td></tr>
+<tr><td>デボノスセイサクショ</td><td>でぼの巣製作所</td></tr>
+<tr><td>デュアルテイルデュアルメイジ</td><td>DualTail(DualMage)</td></tr>
+<tr><td>デューク</td><td>公爵(デューク)</td></tr>
+<tr><td>デルタ</td><td>Delta</td></tr>
+<tr><td>デンゾー</td><td>DENZO</td></tr>
+<tr><td>データイースト</td><td>データイースト</td></tr>
+<tr><td>データムポリスター</td><td>DATAM POLYSTAR</td></tr>
+<tr><td>トイキヤ</td><td>吐息屋</td></tr>
+<tr><td>トゥインクル</td><td>Twinkle</td></tr>
+<tr><td>トゥーファイブ</td><td>TWOFIVE</td></tr>
+<tr><td>トウエイビデオ</td><td>東映ビデオ</td></tr>
+<tr><td>トウキョウショセキ</td><td>東京書籍</td></tr>
+<tr><td>トウゲンキョウ</td><td>桃源郷</td></tr>
+<tr><td>トウホウ</td><td>東宝</td></tr>
+<tr><td>トクマショテンインターメディア</td><td>徳間書店インターメディア</td></tr>
+<tr><td>トップ</td><td>TOP</td></tr>
+<tr><td>トップキャット</td><td>TOPCAT</td></tr>
+<tr><td>トマト</td><td>TOMATO</td></tr>
+<tr><td>トミー</td><td>トミー</td></tr>
+<tr><td>トムボーイ</td><td>Tomboy</td></tr>
+<tr><td>トライアングル</td><td>Triangle</td></tr>
+<tr><td>トライエース</td><td>トライエース</td></tr>
+<tr><td>トライセット</td><td>TRYSET</td></tr>
+<tr><td>トライセットマッド</td><td>TRYSET MAD</td></tr>
+<tr><td>トライテイル</td><td>tritail</td></tr>
+<tr><td>トライファースト</td><td>TRYFIRST</td></tr>
+<tr><td>トランスソフト</td><td>TranceSoft</td></tr>
+<tr><td>トリスター</td><td>Tri-Star</td></tr>
+<tr><td>トリトリプルエックス</td><td>thriXXX </td></tr>
+<tr><td>トリプルエックス</td><td>XXX</td></tr>
+<tr><td>トリプルスレット</td><td>とりぷる・すれっと</td></tr>
+<tr><td>トルピード</td><td>トルピード</td></tr>
+<tr><td>トレジャー</td><td>トレジャー</td></tr>
+<tr><td>トロイ</td><td>Troy</td></tr>
+<tr><td>トロピカルソフト</td><td>TROPICAL SOFT</td></tr>
+<tr><td>トロワ</td><td>Trois</td></tr>
+<tr><td>トーンワークス</td><td>tone work&rsquo;s</td></tr>
+<tr><td>ドアーズ</td><td>doors</td></tr>
+<tr><td>ドウゲンザカラボ</td><td>Dogenzaka Lab</td></tr>
+<tr><td>ドッコイソフト</td><td>どっ恋ソフト</td></tr>
+<tr><td>ドットキカク</td><td>ドット企画</td></tr>
+<tr><td>ドライ</td><td>Drei</td></tr>
+<tr><td>ドラコニウム</td><td>ドラコニウム</td></tr>
+<tr><td>ドラマティッククリエイト</td><td>dramatic create</td></tr>
+<tr><td>ドラート</td><td>ドラート</td></tr>
+<tr><td>ドリーマニア</td><td>Dreamania</td></tr>
+<tr><td>ドルチェ</td><td>DOLCE</td></tr>
+<tr><td>ドレス</td><td>Dress</td></tr>
+<tr><td>ドーベルマンスタイル</td><td>DobermanStyle</td></tr>
+<tr><td>ナイト</td><td>k&rsquo;Night!</td></tr>
+<tr><td>ナインテイル</td><td>NineTail</td></tr>
+<tr><td>ナインライブス</td><td>NINELIVES</td></tr>
+<tr><td>ナグザット</td><td>ナグザット</td></tr>
+<tr><td>ナナウィンド</td><td>NanaWind</td></tr>
+<tr><td>ナナコ</td><td>ななこ</td></tr>
+<tr><td>ナナセンチ</td><td>ななせんち</td></tr>
+<tr><td>ナムコ</td><td>namco</td></tr>
+<tr><td>ナンプウロウ</td><td>南風楼</td></tr>
+<tr><td>ニコ</td><td>NIKO</td></tr>
+<tr><td>ニコチンソフト</td><td>ニコチンソフト</td></tr>
+<tr><td>ニチヨウセキ</td><td>日曜石</td></tr>
+<tr><td>ニッポンイチソフトウェア</td><td>日本一ソフトウェア</td></tr>
+<tr><td>ニトロプラス</td><td>NitroPlus</td></tr>
+<tr><td>ニトロプラスキラル</td><td>Nitro+CHiRAL</td></tr>
+<tr><td>ニホンクリエイト</td><td>日本クリエイト</td></tr>
+<tr><td>ニホンコンピュータシステム</td><td>日本コンピュータシステム</td></tr>
+<tr><td>ニホンテレネット</td><td>日本テレネット</td></tr>
+<tr><td>ニャン</td><td>娘。</td></tr>
+<tr><td>ニャンニャン</td><td>娘娘</td></tr>
+<tr><td>ニョタイコウガクケンキュウジョ</td><td>女体光学研究所</td></tr>
+<tr><td>ニンギョウユウギシャ</td><td>人形遊戯舎＜乙女公房＞</td></tr>
+<tr><td>ニンテンドウ</td><td>任天堂</td></tr>
+<tr><td>ヌシル</td><td>濡汁</td></tr>
+<tr><td>ネイティブ</td><td>native</td></tr>
+<tr><td>ネイト</td><td>Neith</td></tr>
+<tr><td>ネイルシャープ</td><td>Nail Sharp</td></tr>
+<tr><td>ネオピル</td><td>NEOPIL</td></tr>
+<tr><td>ネオプロジェクト</td><td>Neoぷろじぇくと</td></tr>
+<tr><td>ネオユーミ</td><td>ネオユーミ</td></tr>
+<tr><td>ネオン</td><td>NEON</td></tr>
+<tr><td>ネガティブ</td><td>NEGATIVE</td></tr>
+<tr><td>ネガリオン</td><td>NEGALION</td></tr>
+<tr><td>ネクストン</td><td>NEXTON</td></tr>
+<tr><td>ネコネコソフト</td><td>ねこねこソフト</td></tr>
+<tr><td>ネフライト</td><td>Nephrite</td></tr>
+<tr><td>ネル</td><td>ネル</td></tr>
+<tr><td>ネーブル</td><td>Navel</td></tr>
+<tr><td>ネーブルハニーベル</td><td>Navel honeybell</td></tr>
+<tr><td>ノア</td><td>NOA</td></tr>
+<tr><td>ノアールソフト</td><td>ノアールソフト(NOIR)</td></tr>
+<tr><td>ノイズ</td><td>NOISE</td></tr>
+<tr><td>ノウナイカノジョ</td><td>脳内彼女</td></tr>
+<tr><td>ノスタルジックコード</td><td>Nostalgic Chord</td></tr>
+<tr><td>ノスタレーベル</td><td>nostalabel</td></tr>
+<tr><td>ノマド</td><td>Nomad</td></tr>
+<tr><td>ノマドチェリー</td><td>Nomad cherry</td></tr>
+<tr><td>ノルン</td><td>Norn</td></tr>
+<tr><td>ノーブランド</td><td>NO_BRAND</td></tr>
+<tr><td>ハイクオソフト</td><td>ハイクオソフト</td></tr>
+<tr><td>ハイソックス</td><td>highsox</td></tr>
+<tr><td>ハイソフト</td><td>high-soft</td></tr>
+<tr><td>ハイブリッドバルーン</td><td>Hybrid Balloon</td></tr>
+<tr><td>ハオウダークネス</td><td>覇王Darkness</td></tr>
+<tr><td>ハクダクケイ</td><td>白濁系</td></tr>
+<tr><td>ハクダクケイカウパー</td><td>白濁系カウパー</td></tr>
+<tr><td>ハクダクジル</td><td>白濁汁</td></tr>
+<tr><td>ハクホウドウ</td><td>博報堂</td></tr>
+<tr><td>ハダシショウジョ</td><td>裸足少女</td></tr>
+<tr><td>ハチミツ</td><td>ハチミツ</td></tr>
+<tr><td>ハッピーウェスト</td><td>HappyWest</td></tr>
+<tr><td>ハテナ</td><td>Hatena</td></tr>
+<tr><td>ハナマル</td><td>HANAMARU</td></tr>
+<tr><td>ハニィポット</td><td>はにぃぽっと</td></tr>
+<tr><td>ハニィマール</td><td>はにぃま～る</td></tr>
+<tr><td>ハニービー</td><td>honeybee</td></tr>
+<tr><td>ハニービーブラック</td><td>honeybee black</td></tr>
+<tr><td>ハニーボーイ</td><td>Honeyboy</td></tr>
+<tr><td>ハニーマリー</td><td>ハニーマリー</td></tr>
+<tr><td>ハムハムソフト</td><td>はむはむソフト</td></tr>
+<tr><td>ハヤシグミ</td><td>林組</td></tr>
+<tr><td>ハルカゼ</td><td>HARUKAZE</td></tr>
+<tr><td>ハロータアトル</td><td>ハローたあとる</td></tr>
+<tr><td>ハンマーヘッズ</td><td>hammerheads</td></tr>
+<tr><td>ハーツ</td><td>Hearts</td></tr>
+<tr><td>ハートブリング</td><td>ハートブリング</td></tr>
+<tr><td>ハーベスティー</td><td>HarvesT</td></tr>
+<tr><td>ハーベスト</td><td>ハーベスト(ビジュアルアーツ)</td></tr>
+<tr><td>ハーミット</td><td>HERMIT</td></tr>
+<tr><td>ハーモライズ</td><td>Harmorise</td></tr>
+<tr><td>バイオレート</td><td>violate</td></tr>
+<tr><td>バカスカ</td><td>ばかすか</td></tr>
+<tr><td>バク</td><td>BA-KU</td></tr>
+<tr><td>バグシステム</td><td>バグシステム</td></tr>
+<tr><td>バックスピン</td><td>BACKSPIN</td></tr>
+<tr><td>バニープロ</td><td>Bunny Pro.</td></tr>
+<tr><td>バビソフト</td><td>BaviSOFT</td></tr>
+<tr><td>バレット</td><td>Bullet</td></tr>
+<tr><td>バンダイ</td><td>バンダイ</td></tr>
+<tr><td>バンダイナムコエンターテインメントバンダイナムコゲームス</td><td>バンダイナムコエンターテインメント(バンダイナムコゲームス)</td></tr>
+<tr><td>バンプレスト</td><td>バンプレスト</td></tr>
+<tr><td>バンプール</td><td>vanpool</td></tr>
+<tr><td>バーグサラライトウェイト</td><td>バーグサラ・ライトウェイト</td></tr>
+<tr><td>バーサーカーフレイア</td><td>BERSERKER Freyja</td></tr>
+<tr><td>バージンクリーム</td><td>Virgin Cream</td></tr>
+<tr><td>パイン</td><td>PINE</td></tr>
+<tr><td>パウダー</td><td>POWDER</td></tr>
+<tr><td>パコパコソフト</td><td>ぱこぱこそふと</td></tr>
+<tr><td>パコパコソフトプラス</td><td>pacopacosoft+</td></tr>
+<tr><td>パジャマエクスタシー</td><td>ぱじゃまエクスタシー</td></tr>
+<tr><td>パジャマソフト</td><td>ぱじゃまソフト</td></tr>
+<tr><td>パスワード</td><td>P.W.</td></tr>
+<tr><td>パズルボックス</td><td>PUZZLEBOX</td></tr>
+<tr><td>パソケット</td><td>パソケット</td></tr>
+<tr><td>パチパチソフト</td><td>ぱちぱちそふと</td></tr>
+<tr><td>パチパチソフトクロ</td><td>ぱちぱちそふと黒</td></tr>
+<tr><td>パックインソフト</td><td>パックインソフト</td></tr>
+<tr><td>パックインビデオ</td><td>パック・イン・ビデオ</td></tr>
+<tr><td>パティスリー</td><td>パティスリー</td></tr>
+<tr><td>パピリオ</td><td>パピリオ</td></tr>
+<tr><td>パラソル</td><td>Parasol</td></tr>
+<tr><td>パラノイアファクト</td><td>Paranoia/Fact?</td></tr>
+<tr><td>パリティビット</td><td>ParityBit</td></tr>
+<tr><td>パルミエ</td><td>Palmiers</td></tr>
+<tr><td>パレット</td><td>ぱれっと</td></tr>
+<tr><td>パレットクオリア</td><td>ぱれっとクオリア</td></tr>
+<tr><td>パレットダークサイド</td><td>Palette Dark Side</td></tr>
+<tr><td>パレード</td><td>パレ～ド</td></tr>
+<tr><td>パワフルソフト</td><td>ぱわふるソフト</td></tr>
+<tr><td>パンサーソフトウェア</td><td>パンサーソフトウェア</td></tr>
+<tr><td>パンチラキック</td><td>パンチラキック</td></tr>
+<tr><td>パンピー</td><td>PUMPIE</td></tr>
+<tr><td>パンプキンソフト</td><td>ぱんぷきんソフト</td></tr>
+<tr><td>パンプキンソフトウェア</td><td>PUMPKIN SOFTWARE</td></tr>
+<tr><td>パンプキンベア</td><td>ぱんぷきんべあ</td></tr>
+<tr><td>パーティクル</td><td>PARTICLE</td></tr>
+<tr><td>パープル</td><td>PURPLE</td></tr>
+<tr><td>パープルソフトウェア</td><td>Purple software</td></tr>
+<tr><td>パープルソフトウェアディライト</td><td>Purple software delight</td></tr>
+<tr><td>パームツリーソフト</td><td>パームツリーSOFT</td></tr>
+<tr><td>ヒガガガホンポ</td><td>ヒガガガ本舗。</td></tr>
+<tr><td>ヒガンバナ</td><td>彼岸花</td></tr>
+<tr><td>ヒツジグモ</td><td>ひつじぐも</td></tr>
+<tr><td>ヒノウエイタルデザインオフィス</td><td>H. I. Design Office</td></tr>
+<tr><td>ヒャクサンジッセンチ</td><td>130cm</td></tr>
+<tr><td>ヒュー</td><td>hue</td></tr>
+<tr><td>ヒューネックス</td><td>HuneX</td></tr>
+<tr><td>ヒヨコソフトカブシキガイシャトゥインクルクリエイト</td><td>ひよこソフト(2008年-)(株式会社トゥインクルクリエイト)</td></tr>
+<tr><td>ヒートソフト</td><td>HEAT-SOFT</td></tr>
+<tr><td>ビアンカ</td><td>Bianca</td></tr>
+<tr><td>ビクターインタラクティブ</td><td>ビクター・インタラクティブ</td></tr>
+<tr><td>ビクターエンタテインメントビクターオンガクサンギョウ</td><td>ビクターエンタテインメント(ビクター音楽産業)</td></tr>
+<tr><td>ビクターソフト</td><td>ビクターソフト</td></tr>
+<tr><td>ビショップ</td><td>BISHOP</td></tr>
+<tr><td>ビスコ</td><td>ビスコ</td></tr>
+<tr><td>ビスコッティ</td><td>biscotti</td></tr>
+<tr><td>ビタミン</td><td>ビタミン</td></tr>
+<tr><td>ビタードロップ</td><td>bitterdrop</td></tr>
+<tr><td>ビターハーフ</td><td>Bitter half</td></tr>
+<tr><td>ビデオシステム</td><td>VIDEO SYSTEM</td></tr>
+<tr><td>ビビッドカラー</td><td>VividColor</td></tr>
+<tr><td>ビポラー</td><td>Bipolar</td></tr>
+<tr><td>ビーウイングス</td><td>b-Wings</td></tr>
+<tr><td>ビーエルティー</td><td>BLT</td></tr>
+<tr><td>ビーニャン</td><td>び～にゃん</td></tr>
+<tr><td>ビーピンク</td><td>&beta;-pink</td></tr>
+<tr><td>ビーピーエス</td><td>BPS</td></tr>
+<tr><td>ビーライト</td><td>BEe Light</td></tr>
+<tr><td>ビーラスター</td><td>B-luster</td></tr>
+<tr><td>ビーロビー</td><td>BLobby</td></tr>
+<tr><td>ビーワークス</td><td>b_works</td></tr>
+<tr><td>ピアッシ</td><td>PIACCI</td></tr>
+<tr><td>ピクシーベル</td><td>ピクシーベル</td></tr>
+<tr><td>ピクセルミント</td><td>PIXEL MINT</td></tr>
+<tr><td>ピコリ</td><td>ピコリ</td></tr>
+<tr><td>ピストンソフト</td><td>ピストンソフト</td></tr>
+<tr><td>ピタフェチ</td><td>ぴたふぇち!</td></tr>
+<tr><td>ピチカートフィチャリングギガ</td><td>Pizzicato feat. GIGA</td></tr>
+<tr><td>ピュアウィッシュ</td><td>PureWish</td></tr>
+<tr><td>ピュアウール</td><td>PUREWOOL</td></tr>
+<tr><td>ピュアモア</td><td>pure more</td></tr>
+<tr><td>ピヨピヨグミ</td><td>ぴよぴよ組</td></tr>
+<tr><td>ピリリ</td><td>piriri!</td></tr>
+<tr><td>ピル</td><td>PIL</td></tr>
+<tr><td>ピルスラッシュ</td><td>PIL/SLASH</td></tr>
+<tr><td>ピルヴァンプ</td><td>PIL-VAMP</td></tr>
+<tr><td>ピンキィソフト</td><td>PINKYSOFT</td></tr>
+<tr><td>ピンククローバー</td><td>PINK CLOVER</td></tr>
+<tr><td>ピンクティッシュ</td><td>Pink Tissue</td></tr>
+<tr><td>ピンパイ</td><td>Pinpai</td></tr>
+<tr><td>ピンヒール</td><td>ピンヒール from lune</td></tr>
+<tr><td>ピーエヌスィー</td><td>PNC</td></tr>
+<tr><td>ピーキー</td><td>ピーキー</td></tr>
+<tr><td>ピースソフト</td><td>PeasSoft</td></tr>
+<tr><td>ピーチ</td><td>Peach</td></tr>
+<tr><td>ピーチソフト</td><td>ピーチソフト</td></tr>
+<tr><td>ファイブビット</td><td>5bit</td></tr>
+<tr><td>ファイブピービー</td><td>5pb.</td></tr>
+<tr><td>ファイヤワークス</td><td>ファイヤワークス</td></tr>
+<tr><td>ファルコム</td><td>FALCOM</td></tr>
+<tr><td>ファルスタッフウィズエフダブリュー</td><td>FALSTAFF with FW</td></tr>
+<tr><td>ファンシー</td><td>FANCY</td></tr>
+<tr><td>ファントムソフト</td><td>ファントムソフト</td></tr>
+<tr><td>ファーストリーム</td><td>Firstream</td></tr>
+<tr><td>フィズ</td><td>Fizz</td></tr>
+<tr><td>フィニッシュ</td><td>FINISH!</td></tr>
+<tr><td>フェアリス</td><td>fairys</td></tr>
+<tr><td>フェアリーテール</td><td>フェアリーテール</td></tr>
+<tr><td>フェアリーテールエスィックス</td><td>FAIRYTALE ETHIX</td></tr>
+<tr><td>フェイバリット</td><td>FAVORITE</td></tr>
+<tr><td>フェレット</td><td>フェレット</td></tr>
+<tr><td>フェンリル</td><td>ふぇんりる</td></tr>
+<tr><td>フォグ</td><td>F・O・G</td></tr>
+<tr><td>フォレスター</td><td>FORESTER</td></tr>
+<tr><td>フォン</td><td>feng</td></tr>
+<tr><td>フォンテ</td><td>Fonte</td></tr>
+<tr><td>フォンラン</td><td>fonfun</td></tr>
+<tr><td>フォーゲスト</td><td>Forgest</td></tr>
+<tr><td>フォーティファイブ</td><td>FORTYFIVE</td></tr>
+<tr><td>フクロウ</td><td>ふくろう</td></tr>
+<tr><td>フジツウパソコンシステムズ</td><td>富士通パソコンシステムズ</td></tr>
+<tr><td>フジツウパレックス</td><td>富士通パレックス</td></tr>
+<tr><td>フックソフト</td><td>HOOKSOFT(HOOK)</td></tr>
+<tr><td>フデカキソフト</td><td>筆柿そふと</td></tr>
+<tr><td>フューチャー</td><td>future</td></tr>
+<tr><td>フライハイワークス</td><td>フライハイワークス</td></tr>
+<tr><td>フライングシャイン</td><td>FlyingShine</td></tr>
+<tr><td>フライングシャインクロ</td><td>FlyingShine黒</td></tr>
+<tr><td>フライングシャインケン</td><td>FlyingShine犬</td></tr>
+<tr><td>フラット</td><td>FLAT</td></tr>
+<tr><td>フリュー</td><td>FuRyu</td></tr>
+<tr><td>フリル</td><td>Frill</td></tr>
+<tr><td>フリークショー</td><td>Freakshow</td></tr>
+<tr><td>フリース</td><td>Free&rsquo;s</td></tr>
+<tr><td>フルーツ</td><td>フルーツ</td></tr>
+<tr><td>フレア</td><td>FLARE</td></tr>
+<tr><td>フレディ</td><td>FLADY</td></tr>
+<tr><td>フロッシュンシャーフ</td><td>FROSCH&amp;SCHAFE</td></tr>
+<tr><td>フロムソフトウェア</td><td>FROM SOFTWARE</td></tr>
+<tr><td>フロントウィング</td><td>FrontWing</td></tr>
+<tr><td>フロントホック</td><td>フロントホック</td></tr>
+<tr><td>ブシロード</td><td>ブシロード</td></tr>
+<tr><td>ブラウニー</td><td>BROWNIE</td></tr>
+<tr><td>ブラスターヘッド</td><td>Blasterhead</td></tr>
+<tr><td>ブラスターライト</td><td>B-lusterLight</td></tr>
+<tr><td>ブラックカラント</td><td>ブラックカラント</td></tr>
+<tr><td>ブラックサイク</td><td>BLACK Cyc</td></tr>
+<tr><td>ブラックスワン</td><td>ブラックスワン</td></tr>
+<tr><td>ブラックバタフライ</td><td>黒蝶(DOTMAN系列)</td></tr>
+<tr><td>ブラックパッケージトライ</td><td>BLACK PACKAGE TRY</td></tr>
+<tr><td>ブラックモンキー</td><td>Black Monkey</td></tr>
+<tr><td>ブラックラック</td><td>Blackluck</td></tr>
+<tr><td>ブラックラビット</td><td>Black Rabbit</td></tr>
+<tr><td>ブラックリリス</td><td>BLACK LiLiTH</td></tr>
+<tr><td>ブラックルナ</td><td>BlackLUNA</td></tr>
+<tr><td>ブラックレインボー</td><td>BLACKRAINBOW</td></tr>
+<tr><td>ブランド</td><td>BRAND</td></tr>
+<tr><td>ブリーズ</td><td>Breeze!!</td></tr>
+<tr><td>ブルゲオンデマンド</td><td>ブルゲ ON DEMAND</td></tr>
+<tr><td>ブルゲダウンロード</td><td>ブルゲDL</td></tr>
+<tr><td>ブルゲハイブリッド</td><td>ブルゲはいぶりっど</td></tr>
+<tr><td>ブルゲライト</td><td>ブルゲLIGHT</td></tr>
+<tr><td>ブルーインパクト</td><td>BlueImpact</td></tr>
+<tr><td>ブルークレセントムーン</td><td>Blue Crescent Moon</td></tr>
+<tr><td>ブルーゲイル</td><td>BLUE GALE</td></tr>
+<tr><td>ブルーサルビア</td><td>Blue Salvia</td></tr>
+<tr><td>ブルートパーズ</td><td>BLUE TOPAZ</td></tr>
+<tr><td>ブルーヘブン</td><td>Blue Heaven</td></tr>
+<tr><td>ブルームハンドル</td><td>ブルームハンドル</td></tr>
+<tr><td>ブルームーン</td><td>BlueMoon</td></tr>
+<tr><td>ブロッコリー</td><td>ブロッコリー</td></tr>
+<tr><td>ブーストオン</td><td>BOOST ON(コンシューマメーカー)</td></tr>
+<tr><td>ブーストファイブ</td><td>BOOST5</td></tr>
+<tr><td>ブートアップ</td><td>boot UP!</td></tr>
+<tr><td>プチ</td><td>ぷち</td></tr>
+<tr><td>プチアンク</td><td>ぷちあんく</td></tr>
+<tr><td>プチクラウド</td><td>ぷちクラウド</td></tr>
+<tr><td>プチケロキュー</td><td>ぷちけろ(プチケロQ)</td></tr>
+<tr><td>プチデビル</td><td>ぷちDEVIL</td></tr>
+<tr><td>プチパジャマ</td><td>ぷちぱじゃま</td></tr>
+<tr><td>プチパルフェ</td><td>ぷちぱるふぇ</td></tr>
+<tr><td>プチフェレット</td><td>ぷちフェレット</td></tr>
+<tr><td>プチミルフィーユ</td><td>ぷちミルフィーユ</td></tr>
+<tr><td>プチユーミ</td><td>ぷちゆ～み</td></tr>
+<tr><td>プチランジェ</td><td>petitlinge</td></tr>
+<tr><td>プチレーヴ</td><td>プチレーヴ</td></tr>
+<tr><td>プチレーヴノワール</td><td>プチレーヴ・ノワール</td></tr>
+<tr><td>プライド</td><td>pride</td></tr>
+<tr><td>プライムウェイ</td><td>プライムウェイ</td></tr>
+<tr><td>プライムソフト</td><td>PrimeSoft</td></tr>
+<tr><td>プラス</td><td>PL+US</td></tr>
+<tr><td>プラスティック</td><td>ぷらす＋てぃっく</td></tr>
+<tr><td>プラダ</td><td>parade. </td></tr>
+<tr><td>プラチナソフト</td><td>PlatinumSoft</td></tr>
+<tr><td>プラリネ</td><td>プラリネ</td></tr>
+<tr><td>プランピース</td><td>Plan Peace</td></tr>
+<tr><td>プリソート</td><td>PriSorT</td></tr>
+<tr><td>プリックリーアッシュ</td><td>プリックリーアッシュ</td></tr>
+<tr><td>プリムラ</td><td>Primula</td></tr>
+<tr><td>プリンセスシュガー</td><td>Princess Sugar</td></tr>
+<tr><td>プリンセスソフト</td><td>Princess Soft</td></tr>
+<tr><td>プリーツソフト</td><td>Pleats soft</td></tr>
+<tr><td>プルトップ</td><td>PULLTOP</td></tr>
+<tr><td>プルトップエアー</td><td>PULLTOP Air</td></tr>
+<tr><td>プルトップラテ</td><td>PULLTOP LATTE</td></tr>
+<tr><td>プレイモア</td><td>PLAYMORE</td></tr>
+<tr><td>プロトタイプ</td><td>PROTOTYPE</td></tr>
+<tr><td>プロフィトロール</td><td>Profitrolle</td></tr>
+<tr><td>プロペラ</td><td>propeller</td></tr>
+<tr><td>プロメテウス</td><td>Prometheus</td></tr>
+<tr><td>ヘカテ</td><td>Hecate</td></tr>
+<tr><td>ヘクセンハウス</td><td>HexenHaus</td></tr>
+<tr><td>ヘッドルーム</td><td>HEADROOM</td></tr>
+<tr><td>ヘリオス</td><td>ヘリオス</td></tr>
+<tr><td>ベアーズソフト</td><td>BearS Soft</td></tr>
+<tr><td>ベクター</td><td>ベクター</td></tr>
+<tr><td>ベジョータ</td><td>BELLOTA</td></tr>
+<tr><td>ベセスダソフトワークス</td><td>ベセスダ・ソフトワークス</td></tr>
+<tr><td>ベリーベル</td><td>ベリーベル</td></tr>
+<tr><td>ベルカナ</td><td>Berkana</td></tr>
+<tr><td>ベンテン</td><td>Benten</td></tr>
+<tr><td>ベースサンライト</td><td>BaseSon Light</td></tr>
+<tr><td>ベースソン</td><td>BaseSon</td></tr>
+<tr><td>ベースソンスパイス</td><td>BaseSon SPICE*</td></tr>
+<tr><td>ペコー</td><td>pekoe</td></tr>
+<tr><td>ペタラ</td><td>PETALA</td></tr>
+<tr><td>ペパーミントキッズ</td><td>ペパーミントKids</td></tr>
+<tr><td>ペルシャソフト</td><td>ペルシャソフト</td></tr>
+<tr><td>ペルル</td><td>perle</td></tr>
+<tr><td>ペンタ</td><td>PENTA</td></tr>
+<tr><td>ホチキス</td><td>ホチキス</td></tr>
+<tr><td>ホットピンク</td><td>ホットピンク</td></tr>
+<tr><td>ホビボックス</td><td>ホビボックス</td></tr>
+<tr><td>ホワイトサイク</td><td>WHITE CYC</td></tr>
+<tr><td>ホワイトソフト</td><td>WHITESOFT</td></tr>
+<tr><td>ホワイトソフトアルビノ</td><td>WHITESOFT-ALBINO</td></tr>
+<tr><td>ホワイトパウダー</td><td>WhitePowder</td></tr>
+<tr><td>ホワイトプラム</td><td>White Plum</td></tr>
+<tr><td>ホープムーン</td><td>HOPEMOON</td></tr>
+<tr><td>ホームデータ</td><td>ホームデータ</td></tr>
+<tr><td>ホーリーウッド</td><td>ホーリーウッド</td></tr>
+<tr><td>ボクカノプロジェクト</td><td>ボクカノProject</td></tr>
+<tr><td>ボクハマゾデス</td><td>僕はマゾです</td></tr>
+<tr><td>ボトムレス</td><td>ぼとむれす</td></tr>
+<tr><td>ボレロ</td><td>bolero</td></tr>
+<tr><td>ボンビイボンボン</td><td>ボンびいボンボン!</td></tr>
+<tr><td>ボンビー</td><td>Bonbee!</td></tr>
+<tr><td>ボーイズソフトウェア</td><td>Boy&rsquo;s Software</td></tr>
+<tr><td>ポアシャラ</td><td>ポアシャラ</td></tr>
+<tr><td>ポイズン</td><td>POISON</td></tr>
+<tr><td>ポイゾンベリー</td><td>Poison@Berry</td></tr>
+<tr><td>ポコブラック</td><td>ポコブラック</td></tr>
+<tr><td>ポシェット</td><td>Pochette</td></tr>
+<tr><td>ポセイドン</td><td>ポセイドン</td></tr>
+<tr><td>ポタージュ</td><td>Potage</td></tr>
+<tr><td>ポニパチェ</td><td>Poni-Pachet</td></tr>
+<tr><td>ポニポニソフト</td><td>ぽにぽにそふと</td></tr>
+<tr><td>ポニーキャニオン</td><td>ポニーキャニオン</td></tr>
+<tr><td>ポニーテールソフト</td><td>Ponytail Software</td></tr>
+<tr><td>ポリグラム</td><td>ポリグラム</td></tr>
+<tr><td>ポーション</td><td>Portion</td></tr>
+<tr><td>ポーラスター</td><td>POLARSTAR</td></tr>
+<tr><td>マイアミソフト</td><td>Miami Soft</td></tr>
+<tr><td>マイカシュッパン</td><td>マイカ出版</td></tr>
+<tr><td>マイクロキャビン</td><td>マイクロキャビン</td></tr>
+<tr><td>マイクログルーブ</td><td>Microgroove</td></tr>
+<tr><td>マイクロソフト</td><td>マイクロソフト</td></tr>
+<tr><td>マイドーター</td><td>My Daughter</td></tr>
+<tr><td>マイナビ</td><td>マイナビ(毎日コミュニケーションズ)</td></tr>
+<tr><td>マイヒメ</td><td>My姫</td></tr>
+<tr><td>マウントポジション</td><td>マウントポジション</td></tr>
+<tr><td>マカダミアソフト</td><td>マカダミアソフト</td></tr>
+<tr><td>マカナ</td><td>Makana</td></tr>
+<tr><td>マカロンソフト</td><td>まかろんソフト</td></tr>
+<tr><td>マクラ</td><td>枕</td></tr>
+<tr><td>マザーグース</td><td>マザーグース</td></tr>
+<tr><td>マシス</td><td>Masys</td></tr>
+<tr><td>マジックシード</td><td>Magicseed</td></tr>
+<tr><td>マタタビ</td><td>Matatabi</td></tr>
+<tr><td>マックスキュー</td><td>マックスQ</td></tr>
+<tr><td>マッセル</td><td>マッセル</td></tr>
+<tr><td>マップジャパン</td><td>マップジャパン</td></tr>
+<tr><td>マツリキカク</td><td>祭企画</td></tr>
+<tr><td>マテリアル</td><td>material</td></tr>
+<tr><td>マテリアルメル</td><td>material mel</td></tr>
+<tr><td>マドソフト</td><td>まどそふと</td></tr>
+<tr><td>マナ</td><td>mana</td></tr>
+<tr><td>マナツエイト</td><td>MANATSU_8</td></tr>
+<tr><td>マペットボックス</td><td>まぺっとぼっくす</td></tr>
+<tr><td>マホウツカイソフト</td><td>魔法使いソフト</td></tr>
+<tr><td>マボロシウェア</td><td>幻ウェア</td></tr>
+<tr><td>マママックス</td><td>MAMAMAX</td></tr>
+<tr><td>マヨイセン</td><td>まよいせん</td></tr>
+<tr><td>マリアクラウン</td><td>MariaCrown</td></tr>
+<tr><td>マリモ</td><td>まりも</td></tr>
+<tr><td>マリン</td><td>マリン</td></tr>
+<tr><td>マンボウゴヤ</td><td>まんぼう小屋</td></tr>
+<tr><td>マンマミーア</td><td>マンマミーア!</td></tr>
+<tr><td>マーズ</td><td>MARS</td></tr>
+<tr><td>マーブルキャンディソフト</td><td>マーブルCandysoft</td></tr>
+<tr><td>マーベラスエンターテイメントマーベラスエーキューエル</td><td>マーベラス(マーベラスエンターテイメント、マーベラスAQL)</td></tr>
+<tr><td>マーマレェド</td><td>ま～まれぇど</td></tr>
+<tr><td>マールージュ</td><td>Mer Rouge</td></tr>
+<tr><td>ミィティ</td><td>ミィティ</td></tr>
+<tr><td>ミエル</td><td>Miel</td></tr>
+<tr><td>ミオ</td><td>澪(MIO)</td></tr>
+<tr><td>ミカンバコ</td><td>みかんばこ</td></tr>
+<tr><td>ミクスドアップ</td><td>mixed up</td></tr>
+<tr><td>ミストウォーカー</td><td>mistwalker</td></tr>
+<tr><td>ミスラ</td><td>MITHRA</td></tr>
+<tr><td>ミスリルソフトウェア</td><td>ミスリルソフトウェア</td></tr>
+<tr><td>ミックスウィルソフト</td><td>mixwill soft</td></tr>
+<tr><td>ミッドウェイゲームズ</td><td>ミッドウェイ・ゲームズ</td></tr>
+<tr><td>ミナ</td><td>MINA</td></tr>
+<tr><td>ミナトカーニバル</td><td>みなとカーニバル</td></tr>
+<tr><td>ミナトステーション</td><td>みなとすてーしょん</td></tr>
+<tr><td>ミナトソフト</td><td>みなとそふと</td></tr>
+<tr><td>ミニヨン</td><td>Mignonne</td></tr>
+<tr><td>ミノリ</td><td>minori</td></tr>
+<tr><td>ミュウ</td><td>美遊</td></tr>
+<tr><td>ミューテーション</td><td>Mutation</td></tr>
+<tr><td>ミライ</td><td>mirai</td></tr>
+<tr><td>ミライ</td><td>美蕾</td></tr>
+<tr><td>ミライショウネン</td><td>未来少年</td></tr>
+<tr><td>ミルククラウン</td><td>ミルククラウン</td></tr>
+<tr><td>ミルクパイ</td><td>みるくぱい</td></tr>
+<tr><td>ミルクファクトリー</td><td>Milk Factory</td></tr>
+<tr><td>ミルクプリン</td><td>ミルクプリン</td></tr>
+<tr><td>ミルフィーユ</td><td>ミルフィーユ</td></tr>
+<tr><td>ミンク</td><td>Mink</td></tr>
+<tr><td>ミンクエゴ</td><td>Mink EGO</td></tr>
+<tr><td>ミンティスタ</td><td>mintista</td></tr>
+<tr><td>ミント</td><td>MINT</td></tr>
+<tr><td>ミントキューブ</td><td>MintCUBE</td></tr>
+<tr><td>ミード</td><td>Mead</td></tr>
+<tr><td>ムツグミ</td><td>むつ組</td></tr>
+<tr><td>ムーンストーン</td><td>MOONSTONE</td></tr>
+<tr><td>ムーンストーンチェリー</td><td>MOONSTONE Cherry</td></tr>
+<tr><td>ムーンストーンハニー</td><td>MOONSTONE Honey</td></tr>
+<tr><td>ムーンチャイルド</td><td>MOON CHILD</td></tr>
+<tr><td>メイクソフトウェア</td><td>メイクソフトウェア</td></tr>
+<tr><td>メイドミーツキャット</td><td>Maid meets Cat</td></tr>
+<tr><td>メイビーソフト</td><td>May-Be SOFT(メイビーソフト)</td></tr>
+<tr><td>メイビーソフト</td><td>May-Be Soft(有限会社リエーブル)</td></tr>
+<tr><td>メイビーソフトトゥルース</td><td>MBS Truth</td></tr>
+<tr><td>メイビーソフトトゥルース</td><td>MBS TRUSE</td></tr>
+<tr><td>メイファーソフト</td><td>メイファーソフト</td></tr>
+<tr><td>メガストア</td><td>メガストア</td></tr>
+<tr><td>メガロマンス</td><td>メガロマンス</td></tr>
+<tr><td>メサイア</td><td>メサイア</td></tr>
+<tr><td>メサイヤ</td><td>メサイヤ</td></tr>
+<tr><td>メスダンシ</td><td>メス男子</td></tr>
+<tr><td>メタドール</td><td>Meta-Doll</td></tr>
+<tr><td>メディアカイト</td><td>メディアカイト</td></tr>
+<tr><td>メディアクエスト</td><td>Media Quest</td></tr>
+<tr><td>メディアザウルス</td><td>メディアザウルス</td></tr>
+<tr><td>メディアバンク</td><td>メディアバンク</td></tr>
+<tr><td>メディアファクトリー</td><td>メディアファクトリー</td></tr>
+<tr><td>メディアリング</td><td>メディアリング</td></tr>
+<tr><td>メディックス</td><td>メディックス</td></tr>
+<tr><td>メデューサ</td><td>メデューサ</td></tr>
+<tr><td>メニュー</td><td>MENU</td></tr>
+<tr><td>メフィスト</td><td>MEPHISTO</td></tr>
+<tr><td>メリケン</td><td>めりけん</td></tr>
+<tr><td>メルキュア</td><td>Mercure</td></tr>
+<tr><td>メルティ</td><td>めるてぃ</td></tr>
+<tr><td>メルティコウボウ</td><td>メルティ工房</td></tr>
+<tr><td>メルティメイト</td><td>メルティメイト</td></tr>
+<tr><td>メルティーリップ</td><td>Merty Lip</td></tr>
+<tr><td>メロウ</td><td>メロウ</td></tr>
+<tr><td>メロメロキュート</td><td>めろめろキュート</td></tr>
+<tr><td>メロンパン</td><td>めろんぱん</td></tr>
+<tr><td>メージス</td><td>MAGES.</td></tr>
+<tr><td>モア</td><td>MORE</td></tr>
+<tr><td>モエヒナ</td><td>萌雛</td></tr>
+<tr><td>モコプロ</td><td>もこプロ</td></tr>
+<tr><td>モザイク</td><td>MOSAIC</td></tr>
+<tr><td>モソフト</td><td>MO SOFT</td></tr>
+<tr><td>モダンタイムス</td><td>モダンタイムス</td></tr>
+<tr><td>モナコ</td><td>MONAKO</td></tr>
+<tr><td>モノグラム</td><td>Monogram</td></tr>
+<tr><td>モバゲー</td><td>mobage</td></tr>
+<tr><td>モモイロゲキジョウ</td><td>桃色劇場</td></tr>
+<tr><td>モモグミ</td><td>ももグミ</td></tr>
+<tr><td>モモヒナ</td><td>桃雛</td></tr>
+<tr><td>モモフェロ</td><td>桃フェロ</td></tr>
+<tr><td>モルト</td><td>Malt</td></tr>
+<tr><td>モーニング</td><td>もーにんぐ</td></tr>
+<tr><td>モーニングライト</td><td>もーにんぐらいと</td></tr>
+<tr><td>ヤタガラス</td><td>Yatagarasu(八咫鴉)</td></tr>
+<tr><td>ヤミクモツウシン</td><td>闇雲通信</td></tr>
+<tr><td>ユカリ</td><td>縁</td></tr>
+<tr><td>ユキイチゴショコラ</td><td>雪苺ショコラ</td></tr>
+<tr><td>ユズソフト</td><td>ゆずソフト</td></tr>
+<tr><td>ユニコーン</td><td>UnicoЯn</td></tr>
+<tr><td>ユニコーンエー</td><td>unicorn-a</td></tr>
+<tr><td>ユニコーンビー</td><td>unicorn-b</td></tr>
+<tr><td>ユニゾンシフト</td><td>UNiSONSHIFT</td></tr>
+<tr><td>ユニゾンシフトアクセント</td><td>UNiSONSHIFT Accent.</td></tr>
+<tr><td>ユニゾンシフトクレア</td><td>UNiSONSHIFT CREAR</td></tr>
+<tr><td>ユニゾンシフトブロッサム</td><td>UNiSONSHIFT：Blossom</td></tr>
+<tr><td>ユノ</td><td>ユノ</td></tr>
+<tr><td>ユピテル</td><td>Jupiter</td></tr>
+<tr><td>ユメマクラ</td><td>ゆめまくら</td></tr>
+<tr><td>ユリンユリン</td><td>ゆりんゆりん</td></tr>
+<tr><td>ユロット</td><td>Hulotte</td></tr>
+<tr><td>ユーカリ</td><td>ユーカリ</td></tr>
+<tr><td>ユークス</td><td>ユークス</td></tr>
+<tr><td>ユーコム</td><td>UCOM</td></tr>
+<tr><td>ユーストラック</td><td>Us:track</td></tr>
+<tr><td>ユービーアイソフト</td><td>UBI SOFT</td></tr>
+<tr><td>ユーフォニー</td><td>eufonie</td></tr>
+<tr><td>ユーフォニープロダクション</td><td>Euphony Production</td></tr>
+<tr><td>ユーフォリア</td><td>ユーフォリア</td></tr>
+<tr><td>ユーマ</td><td>UMA!</td></tr>
+<tr><td>ユーミソフト</td><td>U・Me SOFT</td></tr>
+<tr><td>ヨックスプロジェクト</td><td>YOX-Project</td></tr>
+<tr><td>ヨナキウグイス</td><td>ヨナキウグイス</td></tr>
+<tr><td>ライアーソフトビジネスパートナー</td><td>Liar Soft(ビジネスパートナー)</td></tr>
+<tr><td>ライオット</td><td>riot</td></tr>
+<tr><td>ライト</td><td>light</td></tr>
+<tr><td>ライトスタッフ</td><td>ライトスタッフ</td></tr>
+<tr><td>ライトプラン</td><td>LightPlan</td></tr>
+<tr><td>ライフォックス</td><td>LiFox</td></tr>
+<tr><td>ライフゼロ</td><td>LIFE0</td></tr>
+<tr><td>ライブドア</td><td>Livedoor</td></tr>
+<tr><td>ライム</td><td>Lime</td></tr>
+<tr><td>ライムライト</td><td>LimeLight</td></tr>
+<tr><td>ライラックソフト</td><td>Lilac Soft</td></tr>
+<tr><td>ラクシュミー</td><td>Laksmi</td></tr>
+<tr><td>ラクリマ</td><td>La&#039;cryma</td></tr>
+<tr><td>ラクーン</td><td>ラクーン</td></tr>
+<tr><td>ラクーン</td><td>Raccoon</td></tr>
+<tr><td>ラグジュアリー</td><td>Luxury</td></tr>
+<tr><td>ラグジュアリーティアラ</td><td>Luxury Tiara</td></tr>
+<tr><td>ラジエル</td><td>raziel</td></tr>
+<tr><td>ラス</td><td>Lass</td></tr>
+<tr><td>ラスク</td><td>RASK</td></tr>
+<tr><td>ラスタライズ</td><td>Lusterise</td></tr>
+<tr><td>ラスピクシー</td><td>Lass Pixy</td></tr>
+<tr><td>ラスルナティック</td><td>Lass Lunatic</td></tr>
+<tr><td>ラズベリー</td><td>らずべり～</td></tr>
+<tr><td>ラッセルキュア</td><td>Russel.cure</td></tr>
+<tr><td>ラッセルピュア</td><td>Russell.pure</td></tr>
+<tr><td>ラテ</td><td>Latte</td></tr>
+<tr><td>ラディ</td><td>Radi</td></tr>
+<tr><td>ラパン</td><td>lapin</td></tr>
+<tr><td>ラビット</td><td>Rabbit</td></tr>
+<tr><td>ラビットソフト</td><td>LaBit Soft</td></tr>
+<tr><td>ラピスブルー</td><td>LAPIS BLUe.</td></tr>
+<tr><td>ラピスラズリ</td><td>Lapis lazuli</td></tr>
+<tr><td>ラブジュース</td><td>LoveJuice</td></tr>
+<tr><td>ラブジュースピンク</td><td>LoveJuiceピンク</td></tr>
+<tr><td>ラブチェリー</td><td>ラブチェリー</td></tr>
+<tr><td>ラブデリバリー</td><td>LoveDelivery</td></tr>
+<tr><td>ラブビッチ</td><td>らぶびっち</td></tr>
+<tr><td>ラブマティック</td><td>らぶまてぃっく</td></tr>
+<tr><td>ラブレイス</td><td>Loverace</td></tr>
+<tr><td>ラプソディ</td><td>ラプソディ</td></tr>
+<tr><td>ラプター</td><td>RAPTOR</td></tr>
+<tr><td>ラプラシアン</td><td>Laplacian</td></tr>
+<tr><td>ラミア</td><td>Lamia</td></tr>
+<tr><td>ラム</td><td>RaM</td></tr>
+<tr><td>ラルフ</td><td>Ralf</td></tr>
+<tr><td>ランソフトウェア</td><td>R.A.N Software</td></tr>
+<tr><td>ランプオブシュガー</td><td>Lump of Sugar</td></tr>
+<tr><td>ランマール</td><td>郎猫儿(ランマール)</td></tr>
+<tr><td>リアップ</td><td>Liapp</td></tr>
+<tr><td>リアル</td><td>REAL</td></tr>
+<tr><td>リオ</td><td>Rio</td></tr>
+<tr><td>リオン</td><td>Reon</td></tr>
+<tr><td>リキッド</td><td>Liquid</td></tr>
+<tr><td>リキッドシャイン</td><td>Liquid-Shine</td></tr>
+<tr><td>リキッドタッチャブル</td><td>Liquid-Touchable</td></tr>
+<tr><td>リコッタ</td><td>Ricotta</td></tr>
+<tr><td>リジェット</td><td>Rejet</td></tr>
+<tr><td>リセアン</td><td>Lyceen</td></tr>
+<tr><td>リップ</td><td>Lip</td></tr>
+<tr><td>リップスティック</td><td>Lipstick</td></tr>
+<tr><td>リップリップ</td><td>Lip2</td></tr>
+<tr><td>リトルチーズ</td><td>little cheese</td></tr>
+<tr><td>リバース</td><td>Re:verse</td></tr>
+<tr><td>リビドーソフト</td><td>りびどーそふと</td></tr>
+<tr><td>リフラフ</td><td>riffraff</td></tr>
+<tr><td>リプル</td><td>りぷる</td></tr>
+<tr><td>リボンマジック</td><td>リボンマジック</td></tr>
+<tr><td>リメイン</td><td>Remain</td></tr>
+<tr><td>リリアン</td><td>リリアン</td></tr>
+<tr><td>リリアン</td><td>Lillian</td></tr>
+<tr><td>リリィーズ</td><td>Lily-z</td></tr>
+<tr><td>リリス</td><td>LiLiTH</td></tr>
+<tr><td>リリスミスト</td><td>LiLiTH Mist</td></tr>
+<tr><td>リリム</td><td>LiLiM</td></tr>
+<tr><td>リリムダークネス</td><td>LiLiM DARKNESS</td></tr>
+<tr><td>リリムナマ</td><td>LiLiM生</td></tr>
+<tr><td>リルヒズパーティー</td><td>りるひ&rsquo;s Party</td></tr>
+<tr><td>リンガーベル</td><td>RINGERBELL</td></tr>
+<tr><td>リーフ</td><td>Leaf</td></tr>
+<tr><td>リーベ</td><td>LIEBE</td></tr>
+<tr><td>ルシナ</td><td>LUCINA</td></tr>
+<tr><td>ルショコラ</td><td>Le.Chocolat</td></tr>
+<tr><td>ルスト</td><td>LUST</td></tr>
+<tr><td>ルストビット</td><td>Lust Bit</td></tr>
+<tr><td>ルセット</td><td>Recette</td></tr>
+<tr><td>ルチャリブレ</td><td>Lucha Libre</td></tr>
+<tr><td>ルナソフト</td><td>ルナソフト</td></tr>
+<tr><td>ルナティック</td><td>LUNATIC</td></tr>
+<tr><td>ルネ</td><td>ルネ</td></tr>
+<tr><td>ルネチームビターズ</td><td>ルネ Team Bitters</td></tr>
+<tr><td>ルネフューチャリングディ</td><td>ルネ featuring D</td></tr>
+<tr><td>ルネラブズケー</td><td>ルネ loves K</td></tr>
+<tr><td>ルピナス</td><td>ルピナス</td></tr>
+<tr><td>ルーズ</td><td>Lose</td></tr>
+<tr><td>ルート</td><td>ROOT</td></tr>
+<tr><td>ルートヌコ</td><td>root nuko</td></tr>
+<tr><td>ルートヌコプラスエッチ</td><td>root nuko+H</td></tr>
+<tr><td>ルーン</td><td>RUNE</td></tr>
+<tr><td>レア</td><td>Rare</td></tr>
+<tr><td>レイチェル</td><td>レイチェル</td></tr>
+<tr><td>レイトブラック</td><td>Rateblack</td></tr>
+<tr><td>レイルソフト</td><td>raiLsoft</td></tr>
+<tr><td>レインディア</td><td>レインディア</td></tr>
+<tr><td>レインボウ</td><td>rainbow</td></tr>
+<tr><td>レインボウサイク</td><td>RAINBOW CYC</td></tr>
+<tr><td>レイヴ</td><td>RAVE</td></tr>
+<tr><td>レウキアノヤカタ</td><td>レウキアの館</td></tr>
+<tr><td>レグルス</td><td>Regulus</td></tr>
+<tr><td>レッドエンタテインメント</td><td>RED entertainment</td></tr>
+<tr><td>レッドシグナル</td><td>れっどしぐなる</td></tr>
+<tr><td>レッドゾーン</td><td>RED-ZONE</td></tr>
+<tr><td>レッドレベル</td><td>Red Rebel</td></tr>
+<tr><td>レッドレーベル</td><td>Red Label</td></tr>
+<tr><td>レビン</td><td>Rave&#039;N</td></tr>
+<tr><td>レベッカ</td><td>REBECCA</td></tr>
+<tr><td>レベルファイブ</td><td>レベルファイブ</td></tr>
+<tr><td>レンガシャ</td><td>煉瓦舎</td></tr>
+<tr><td>レヴォリューション</td><td>レヴォリューション</td></tr>
+<tr><td>レヴォル</td><td>LevoL</td></tr>
+<tr><td>ロストスクリプト</td><td>LOST SCRIPT</td></tr>
+<tr><td>ロストハート</td><td>Lost Heart</td></tr>
+<tr><td>ロゼ</td><td>LOZE</td></tr>
+<tr><td>ロゼブル</td><td>Rosebleu</td></tr>
+<tr><td>ロックマン</td><td>ロックマン</td></tr>
+<tr><td>ロンドベル</td><td>Rondo Bell feat.GIGA</td></tr>
+<tr><td>ワイルドライフ</td><td>ワイルドライフ</td></tr>
+<tr><td>ワッフル</td><td>Waffle</td></tr>
+<tr><td>ワニブックス</td><td>ワニブックス</td></tr>
+<tr><td>ワム</td><td>WAM</td></tr>
+<tr><td>ワラシ</td><td>童</td></tr>
+<tr><td>ワルキューレ</td><td>わるきゅ～れ</td></tr>
+<tr><td>ワンアップ</td><td>ONE-UP</td></tr>
+<tr><td>ワンコソフト</td><td>わんこソフト</td></tr>
+<tr><td>ワンダーフール</td><td>Wonder Fool</td></tr>
+<tr><td>ワンドロー</td><td>ワンドロー</td></tr>
+<tr><td>ワークジャム</td><td>ワークジャム</td></tr>
+<tr><td>ワープ</td><td>ワープ</td></tr>
+<tr><td>ワールデバイス</td><td>ワール・デバイス</td></tr>
+<tr><td>ワールプール</td><td>Whirlpool</td></tr>
+<tr><td>ヴァナディス</td><td>Vanadis</td></tr>
+<tr><td>ヴァージンインタラクティブ</td><td>ヴァージンインタラクティブ</td></tr>
+<tr><td>ヴィジット</td><td>ヴィジット</td></tr>
+<tr><td>ヴィヴィアン</td><td>Vi★Vi★an</td></tr>
+<tr><td>ヴィーナス</td><td>ヴィーナス</td></tr>
+<tr><td>ヴィーナスエス</td><td>Venus_S</td></tr>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+<!-- main　ここまで -->
+
+<!-- footer　ここから -->
+<div id="footer">
+
+<hr />
+<!-- site_infomation　ここから -->
+<div id="site_infomation">
+<address>
+ひろいん<br />
+erscape &#64; apost.plala.or.jp
+</address>
+</div>
+<!-- site_infomation　ここまで -->
+
+</div>
+<!-- footer　ここまで -->
+
+</div>
+<!-- container　ここまで -->
+
+</body>
+</html>

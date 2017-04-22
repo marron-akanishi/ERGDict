@@ -2,8 +2,8 @@ import io
 import jaconv
 from bs4 import BeautifulSoup
 
-html = open('source.html','rt',encoding='UTF-8')
-out = open('ergtitle.txt','wt',encoding='UTF-8')
+html = open('source_brand.html','rt',encoding='UTF-8')
+out = open('ergbrand.txt','wt',encoding='UTF-8')
 soup = BeautifulSoup(html, 'html.parser')
 
 table = soup.find('table')
