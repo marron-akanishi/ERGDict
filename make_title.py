@@ -16,7 +16,8 @@ for i,data in enumerate(table.find_all('tr')):
     text += jaconv.kata2hira(name[0].string) + "\t"
     text += name[1].string + "\t"
     text += "固有名詞\t"
-    text += name[2].string + "\n"
+    text += "ブランド：" + name[2].string + "｜"
+    text += "発売日：" + name[3].string + "\n"
     out.write(text)
 
 out.close()
