@@ -10,10 +10,13 @@ Google日本語入力の辞書ツールから管理→新規辞書にインポ�
 ## 変換に必要なもの
 
 - Python3
+- requests(SQLの実行結果を取得するのに使用)
 - Beautiful Soup4(HTMLの切り出しに使用)
 - jaconv(カタカナ→ひらがな変換に使用)
 
 ## リスト作成方法  
+現在はmake_title.pyを実行するだけで以下のことを自動で行います。  
+### 過去の方法
 [SQL実行フォーム -エロゲーマーのためのSQL-](https://goo.gl/WBuoeB)で以下のSQL文を実行  
 ```SQL  
 SELECT g.furigana,g.gamename,b.brandname,g.sellday
@@ -22,8 +25,8 @@ INNER JOIN brandlist b
 ON b.id = g.brandname
 WHERE sellday >= '1995-01-01'
 AND sellday <> '2030-01-01'
-AND okazu = 'f'
-ORDER BY furigana
+AND okazu <> 't'
+ORDER BY g.furigana
 ```  
 出力結果のHTMLを保存し、source.htmlにコピーした後にmake_title.pyを実行する。  
 すると辞書がergtitle.txtとして出力される。  
@@ -32,10 +35,11 @@ Google日本語入力で辞書としてインポート出来る形式
 読み[tab]タイトル[tab]固有名詞[tab]ブランド名|発売日という感じで一行ずつ並んで出力される。  
 ### メモ
 _brandはブランド一覧出力用  
+こちらも現状は自動出力が可能です。  
 ```SQL  
 SELECT brandfurigana,brandname
 FROM brandlist
-WHERE kind = "CORPORATION"
-AND lost = "FALSE"
+WHERE kind = 'CORPORATION'
+AND lost = 'FALSE'
 ORDER BY brandfurigana
 ```
