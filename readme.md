@@ -35,7 +35,7 @@ Google日本語入力で辞書としてインポート出来る形式
 読み[tab]タイトル[tab]固有名詞[tab]ブランド名|発売日という感じで一行ずつ並んで出力される。  
 ### メモ
 _brandはブランド一覧出力用  
-こちらも現状は自動出力が可能です。  
+こちらも現在は自動出力が可能です。  
 ```SQL  
 SELECT brandfurigana,brandname
 FROM brandlist
