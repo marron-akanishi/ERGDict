@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block menu %}
+<link href="/static/css/loading.css" rel="stylesheet" type="text/css" />
+<script src="/static/js/menu.js"></script>
+<div class="container">
+  <ul class="nav nav-tabs" id="modetab" role="tablist">
+    <li role="presentation" class="active"><a href="#title" aria-controls="title" role="tab" data-toggle="tab">タイトル</a></li>
+    <li role="presentation"><a href="#brand" aria-controls="bland" role="tab" data-toggle="tab">ブランド</a></li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="title">
+      <br>
+      <form id="ergtitle" action="/maketitle">
+        <div class="form-group">
+          <label for="day">開始日:</label>
+          <input type="date" id="day" name="sellday" class="form-control" value="1995-01-01">
+        </div>
+        <p><input type="checkbox" name="unknown">発売日未定の作品も含める</p>
+        <p><input type="checkbox" name="okazu">抜きゲーも含める</input></p>
+        <button type="submit" class="btn btn-primary">生成＆ダウンロード</button>
+      </form>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="brand">
+      <br>
+      <form id="ergbrand" action="/makebrand">
+        <p><input type="checkbox" name="circle">同人も含める</input><p>
+        <p><input type="checkbox" name="lost">現在存在しないブランドも含める</input><p>
+        <button type="submit" class="btn btn-primary">生成＆ダウンロード</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock menu %}
