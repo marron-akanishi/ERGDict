@@ -1,5 +1,6 @@
-Flask==0.12
-Jinja2==2.9.5
-requests==2.14.2
-jaconv==0.2.0
-beautifulsoup4==4.5.3
+gunicorn
+Flask
+Jinja2
+requests
+jaconv
+beautifulsoup4
