@@ -4,15 +4,18 @@ import jaconv
 from bs4 import BeautifulSoup
 
 def make(circle, lost):
-    if circle == False and lost == False:
-        basetext = "SELECT brandfurigana,brandname FROM brandlist WHERE "
-    else:
+    if circle and lost:
         basetext = "SELECT brandfurigana,brandname FROM brandlist "
-    if circle == False:
-        basetext += "kind = 'CORPORATION' AND "
-    if lost == False:
-        basetext += "lost = 'FALSE' "
+    else:
+        basetext = "SELECT brandfurigana,brandname FROM brandlist WHERE "
+        if circle == False:
+            basetext += "kind = 'CORPORATION' "
+        if lost == False:
+            if circle == False:
+                basetext += "AND "
+            basetext += "lost = 'FALSE' "
     basetext += "ORDER BY brandfurigana"
+    print(basetext)
     url = "http://erogamescape.dyndns.org/~ap2/ero/toukei_kaiseki/sql_for_erogamer_form.php"
     s = requests.session()
     payload = {'sql': basetext}
