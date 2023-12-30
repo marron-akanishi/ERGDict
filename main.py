@@ -1,3 +1,4 @@
+import os
 import flask
 import make_title as title
 import make_brand as brand
@@ -33,4 +34,4 @@ def checkbox(text):
         return False
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0') # どこからでもアクセス可能に
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080))) # どこからでもアクセス可能に
